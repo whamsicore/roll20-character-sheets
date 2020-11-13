@@ -1,5 +1,6 @@
 <div>
-  <!-- <button class="hidden" name="roll_reroll0" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=0}} {{roll=[[0d6&gt;6]]}}"></button>
+  <!-- 
+  <button class="hidden" name="roll_reroll0" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=0}} {{roll=[[0d6&gt;6]]}}"></button>
   <button class="hidden" name="roll_reroll1" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=1}} {{roll=[[1d6&gt;6]]}}"></button>
   <button class="hidden" name="roll_reroll2" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=2}} {{roll=[[2d6&gt;6]]}}"></button>
   <button class="hidden" name="roll_reroll3" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=3}} {{roll=[[3d6&gt;6]]}}"></button>
@@ -16,7 +17,14 @@
   <button class="hidden" name="roll_reroll14" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=14}} {{roll=[[14d6&gt;6]]}}"></button>
   <button class="hidden" name="roll_reroll15" type="roll" value="&amp;{template:tftl} {{name=Reroll}} {{character_name=@{character_name}}} {{reroll_dice=15}} {{roll=[[15d6&gt;6]]}}"></button> -->
 </div>
-<input data-i18n-value="Reroll" name="attr_translation_luck" type="hidden" value="Reroll"/>
+<button 
+  name="roll_reroll_push" 
+  type="roll" 
+  value="&amp;{template:tftl} {{name=Push}} {{character_name=@{character_name}}} {{desire=@{desire}}} {{empathy=@{empathy}}} {{roll=[[[[@{desire}]]d6&gt;6]]}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}">
+</button>
+
+<input data-i18n-value="Reroll" name="attr_spirit_button" type="hidden" value="Spirit Push"/>
+
 <input name="attr_sheet_version" type="hidden"/>
 <div class="tftl-wrapper">
   <div class="tftl-logo"><img src="https://i.imgur.com/hncOnkZ.jpg"/></div>
@@ -28,7 +36,7 @@
           class="tftl-panel__label--button" 
           xdata-i18n="Control" 
           type="roll" 
-          value="&amp;{template:tftl} {{name=control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{control}}} {{stat_title=control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
+          value="&amp;{template:tftl} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
         </button>
         <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
       </div> <!-- control button -->
@@ -37,7 +45,7 @@
           class="tftl-panel__label--button" 
           xdata-i18n="Flow" 
           type="roll" 
-          value="&amp;{template:tftl} {{name=flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
+          value="&amp;{template:tftl} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
         </button>
         <input class="tftl-panel__input--small" name="attr_flow" type="number" value="0"/>
       </div> <!-- flow button -->
@@ -47,7 +55,7 @@
           class="tftl-panel__label--button" 
           xdata-i18n="Compute" 
           type="roll" 
-          value="&amp;{template:tftl} {{name=compute}} {{character_name=@{character_name}}} {{roll=[[[[@{compute}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{compute}}} {{stat_title=compute}} {{bonus_dice=?{Bonus Dice|0}}} "> Compute
+          value="&amp;{template:tftl} {{action_name=Compute}} {{character_name=@{character_name}}} {{roll=[[[[@{compute}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{compute}}} {{stat_title=compute}} {{bonus_dice=?{Bonus Dice|0}}} "> Compute
         </button>
         <input class="tftl-panel__input--small" name="attr_compute" type="number" value="0"/>
       </div> <!-- compute button -->
@@ -57,7 +65,7 @@
           class="tftl-panel__label--button" 
           xdata-i18n="Feel" 
           type="roll" 
-          value="&amp;{template:tftl} {{name=feel}} {{character_name=@{character_name}}} {{roll=[[[[@{feel}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{feel}}} {{stat_title=feel}} {{bonus_dice=?{Bonus Dice|0}}} "> Feel
+          value="&amp;{template:tftl} {{action_name=Feel}} {{character_name=@{character_name}}} {{roll=[[[[@{feel}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{feel}}} {{stat_title=feel}} {{bonus_dice=?{Bonus Dice|0}}} "> Feel
         </button>
         <input class="tftl-panel__input--small" name="attr_feel" type="number" value="0"/>
       </div> <!-- feel button -->
@@ -67,7 +75,7 @@
           class="tftl-panel__label--button" 
           xdata-i18n="Desire" 
           type="roll" 
-          value="&amp;{template:tftl} {{name=desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
+          value="&amp;{template:tftl} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
         </button>
         <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
       </div> <!-- desire button -->
@@ -91,7 +99,7 @@
           class="tftl-panel__label--button">Hitpoints
         </strong>
         <input class="tftl-panel__input--small" name="attr_hitpoint" xplaceholder="25" title="@{attr_hitpoint}" type="number">
-        <span class="minmax-display-divide">/  </span>
+        <span class="minmax-display-divide"> / </span>
         <input class="tftl-panel__input--small" name="attr_hitpoint_max" xplaceholder="25" title="@{attr_hitpoint_max}" type="number">
       </div>
 
@@ -260,67 +268,52 @@
   </div> <!-- tftl-rightcol -->
 </div> <!-- tftl-wrapper -->
 <rolltemplate class="sheet-rolltemplate-tftl">
-  <div class="sheet-tftl-container">{{#name}}
-    <h1>{{name}} </h1>{{/name}}
+  <div class="sheet-tftl-container">
+    {{#action_name}}
+      <h1>{{action_name}}</h1>
+    {{/action_name}}
+
     {{#character_name}}
-    <h2>{{character_name}} </h2>{{/character_name}}
-    <div class="sheet-tftl-body">{{#stat_value}}
-      <div class="sheet-tftl-roll-row"><span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>{{/stat_value}}
+      <h2>{{character_name}} </h2>
+    {{/character_name}}
+
+    <div class="sheet-tftl-body">
+      {{#stat_value}}
+        <div class="sheet-tftl-roll-row"><span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>
+      {{/stat_value}}
+      
       {{#skill_value}}
-      <div class="sheet-tftl-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>{{/skill_value}}
-      <!-- {{#reroll_dice}}
-      <div class="sheet-tftl-roll-row"><span>+</span><span data-i18n="Reroll">Reroll</span><span>({{reroll_dice}}) </span></div>{{/reroll_dice}} -->
+        <div class="sheet-tftl-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>
+      {{/skill_value}}
+
       {{#bonus_dice}}
-      <div class="sheet-tftl-roll-row">
-        <span>+</span>
-        <span data-i18n="Bonus">Bonus</span>
-        <span>({{bonus_dice}}) </span>
-      </div>{{/bonus_dice}}
+        <div class="sheet-tftl-roll-row">
+          <span>+</span>
+          <span data-i18n="Bonus">Bonus</span>
+          <span>({{bonus_dice}}) </span>
+        </div>
+      {{/bonus_dice}}
 
       <div class="sheet-tftl-roll-row">
         <span xdata-i18n="Bonus">Energy</span>
         <span>({{energy}}) </span> / <span>({{energyMax}}) </span> 
       </div>
-      <!-- {{#rollGreater() upset 0}} -->
       
     </div>
-    <div class="sheet-tftl-roll"><span>{{roll}}</span><span>Successes</span></div>
-    <!-- <div class="sheet-tftl-buttons">{{#reroll1}}{{#rollTotal() roll 0}}
-      {{reroll0}}
-      {{/rollTotal() roll 0}}{{#rollTotal() roll 1}}
-      {{reroll1}}
-      {{/rollTotal() roll 1}}{{#rollTotal() roll 2}}
-      {{reroll2}}
-      {{/rollTotal() roll 2}}{{#rollTotal() roll 3}}
-      {{reroll3}}
-      {{/rollTotal() roll 3}}{{#rollTotal() roll 4}}
-      {{reroll4}}
-      {{/rollTotal() roll 4}}{{#rollTotal() roll 5}}
-      {{reroll5}}
-      {{/rollTotal() roll 5}}{{#rollTotal() roll 6}}
-      {{reroll6}}
-      {{/rollTotal() roll 6}}{{#rollTotal() roll 7}}
-      {{reroll7}}
-      {{/rollTotal() roll 7}}{{#rollTotal() roll 8}}
-      {{reroll8}}
-      {{/rollTotal() roll 8}}{{#rollTotal() roll 9}}
-      {{reroll9}}
-      {{/rollTotal() roll 9}}{{#rollTotal() roll 10}}
-      {{reroll10}}
-      {{/rollTotal() roll 10}}{{#rollTotal() roll 11}}
-      {{reroll11}}
-      {{/rollTotal() roll 11}}{{#rollTotal() roll 12}}
-      {{reroll12}}
-      {{/rollTotal() roll 12}}{{#rollTotal() roll 13}}
-      {{reroll13}}
-      {{/rollTotal() roll 13}}{{#rollTotal() roll 14}}
-      {{reroll14}}
-      {{/rollTotal() roll 14}}{{#rollTotal() roll 15}}
-      {{reroll15}}
-      {{/rollTotal() roll 15}}
-      <div class="sheet-tftl-buttontext" data-i18n="Spend a point of luck, or take a condition">Spend a point of luck, or take a condition</div>{{/reroll1}}
-    </div> -->
+    <div class="sheet-tftl-roll">
+      <span>{{roll}}</span> <span>Successes</span>
+    </div>
+
+    <div class="sheet-tftl-buttons">
+      {{spirit_button}}
+      <div class="sheet-tftl-buttontext" 
+        xdata-i18n="Push with your Spirit!">
+        Push with your Spirit!
+      </div>
+    </div>
+
     <div class="sheet-tftl-footer"></div>
+
   </div> <!-- sheet-tftl-container -->
 </rolltemplate>
 
