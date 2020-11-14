@@ -5,7 +5,7 @@
 
 .charsheet .sheet-chrono-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: start;
   gap: 1em;
   margin-bottom: 5em;
@@ -40,11 +40,22 @@
   /*align-items: start;*/
   gap: 1em;
 }
-
 .charsheet .sheet-chrono-col3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
+  gap: 1em;
+}
+.charsheet .sheet-chrono-col4 {
+  display: grid;
+  /*grid-template-columns: 1.15fr 0.85fr;*/
+  /*align-items: start;*/
+  gap: 1em;
+}
+.charsheet .sheet-chrono-col5 {
+  display: grid;
+  /*grid-template-columns: 1.15fr 0.85fr;*/
+  /*align-items: start;*/
   gap: 1em;
 }
 
@@ -307,7 +318,7 @@
 .charsheet .sheet-tftl-panel__textarea--full:hover {
   background-color: rgba(177, 125, 29, 0.2);
 }
-.charsheet .sheet-tftl-character {
+.charsheet .sheet-tftl-character-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px 1px;
@@ -514,18 +525,19 @@ input[type="radio"]:checked ~ input[type="radio"] + span::before {
     content: "";
 }
 
-.sheet-heart-symbol {
+.charsheet .sheet-heart-symbol {
   width: 25px;
   height: 25px;
   margin-right: 5px;
 }
 
-.sheet-lightning-symbol {
+.charsheet .sheet-lightning-symbol {
   width: 25px;
   height: 25px;
   /*margin-right: 5px;*/
 }
 
-.sheet-tftl-logo {
+.charsheet .sheet-tftl-logo {
   background-color: #000;   
+  height: 250px;
 }
