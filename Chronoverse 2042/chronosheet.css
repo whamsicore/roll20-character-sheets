@@ -56,12 +56,8 @@
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
   background: #000;
 }
-.charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--textarea:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--item:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--iconic:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--relationship:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--luck:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--span2:nth-child(even), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--span1:nth-child(even) {
-  background-color: #fee0c9;
-}
-.charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--textarea:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--item:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--iconic:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--relationship:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--luck:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--span2:nth-child(odd), .charsheet .sheet-tftl-panel--alternate .sheet-tftl-panel__row--span1:nth-child(odd) {
-  background-color: #fbb888;
-}
+
+
 .charsheet .sheet-tftl-panel--full {
   grid-column: 1/-1;
 }
@@ -160,7 +156,13 @@
   align-items: center;
   min-height: 3em;
   padding: 0.35em;
-  background-color: #feefd3;
+  background-color: #fff; /*notes area*/
+}
+.charsheet .sheet-light-bg {
+  background-color: #8abcf9; /*lighter hue*/
+}
+.charsheet .sheet-dark-bg {
+  background-color: #f95867; /*darker hue*/
 }
 .charsheet .sheet-tftl-panel__row--span1 {
   padding: 0;
@@ -510,4 +512,20 @@ input[type="radio"] + span::before {
 /* Remove dot from all radios _after_ selected one */
 input[type="radio"]:checked ~ input[type="radio"] + span::before {    
     content: "";
+}
+
+.sheet-heart-symbol {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.sheet-lightning-symbol {
+  width: 25px;
+  height: 25px;
+  /*margin-right: 5px;*/
+}
+
+.sheet-tftl-logo {
+  background-color: #000;   
 }

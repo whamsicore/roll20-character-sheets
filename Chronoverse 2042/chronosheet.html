@@ -9,11 +9,12 @@
 <input name="attr_sheet_version" type="hidden"/>
 
 <div class="chrono-wrapper">
-  <div class="tftl-logo"><img src="https://i.imgur.com/hncOnkZ.jpg"/></div>
+  <div class="tftl-logo"><img src="https://i.imgur.com/Cyt94uH.png"/></div>
   <div class="chrono-col1">
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Spirit</div>
-      <div class="tftl-panel__row background-rand-6">
+
+      <div class="tftl-panel__row background-rand-6 dark-bg">
         <button 
           class="tftl-panel__label--button" 
           xdata-i18n="Desire" 
@@ -23,7 +24,7 @@
         <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
       </div> <!-- desire button -->
 
-      <div class="tftl-panel__row background-rand-6">
+      <div class="tftl-panel__row background-rand-6 light-bg">
         <button 
           class="tftl-panel__label--button" 
           xdata-i18n="Empathy" 
@@ -32,9 +33,11 @@
         </button>
         <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
       </div> <!-- empathy button -->
+      
   
       <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Mind</div>
-      <div class="tftl-panel__row background-rand-6">
+
+      <div class="tftl-panel__row background-rand-6 dark-bg">
         <button 
           class="tftl-panel__label--button" 
           xdata-i18n="Logic" 
@@ -44,7 +47,7 @@
         <input class="tftl-panel__input--small" name="attr_logic" type="number" value="0"/>
       </div> <!-- Logic button -->
       
-      <div class="tftl-panel__row background-rand-6">
+      <div class="tftl-panel__row background-rand-6 light-bg">
         <button 
           class="tftl-panel__label--button" 
           xdata-i18n="Vibe" 
@@ -56,7 +59,7 @@
 
       <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Body</div>
 
-      <div class="tftl-panel__row background-rand-6">
+      <div class="tftl-panel__row background-rand-6 dark-bg">
         <button 
           class="tftl-panel__label--button" 
           xdata-i18n="Control" 
@@ -65,7 +68,8 @@
         </button>
         <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
       </div> <!-- control button -->
-      <div class="tftl-panel__row background-rand-6">
+
+      <div class="tftl-panel__row background-rand-6 light-bg">
         <button 
           class="tftl-panel__label--button" 
           xdata-i18n="Flow" 
@@ -97,9 +101,11 @@
       <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Hitpoint/Energy</div>
 
       <div class="tftl-panel__row background-rand-6">
+        <img class="heart-symbol" src="https://i.imgur.com/yxSrvMU.png"/>
+
         <strong 
           xdata-i18n="hitpoints"
-          class="tftl-panel__label--button">Hitpoints
+          class="tftl-panel__label--button">HP
         </strong>
         <input class="tftl-panel__input--small" name="attr_hitpoint" xplaceholder="25" title="@{attr_hitpoint}" type="number">
         <span class="minmax-display-divide"> / </span>
@@ -107,6 +113,8 @@
       </div>
 
       <div class="tftl-panel__row background-rand-9">
+        <img class="lightning-symbol" src="https://i.imgur.com/gpv6fx1.png"/>
+
         <strong 
           xdata-i18n="energy"
           class="tftl-panel__label--button">Energy
@@ -120,7 +128,7 @@
 
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Pain(<span name="attr_pain"></span>)</div>
-      <div class="tftl-panel__row tftl-experience background-rand-1"> 
+      <div class="tftl-panel__row tftl-experience background-rand-1 light-bg"> 
         <input type="radio" name="attr_pain" value="0" checked="checked"><span></span>
         <input type="radio" name="attr_pain" value="1"><span></span>
         <input type="radio" name="attr_pain" value="2"><span></span>
@@ -137,7 +145,7 @@
 
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Fear(<span name="attr_fear"></span>)</div>
-      <div class="tftl-panel__row tftl-experience background-rand-1"> 
+      <div class="tftl-panel__row tftl-experience background-rand-1 dark-bg"> 
         <input type="radio" name="attr_fear" value="0" checked="checked"><span></span>
         <input type="radio" name="attr_fear" value="1"><span></span>
         <input type="radio" name="attr_fear" value="2"><span></span>
