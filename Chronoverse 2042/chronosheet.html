@@ -342,6 +342,22 @@
       </fieldset>
     </div> <!-- Skill(VIB) -->
 
+    <div class="tftl-attributes tftl-panel--alternate">
+      <div class="tftl-panel__header background-rand-2" xdata-i18n="Level">Level</div>
+
+      <div class="tftl-panel__row background-rand-6">
+        <input type="number" name="attr_character_level" value="@{control}*2+@{flow}*2+@{logic}*2+@{vibe}*2+@{desire}*5+@{empathy}*5" disabled="true" />
+      </div>
+    </div> <!-- sheet-level-display -->
+
+    <div class="tftl-attributes tftl-panel--alternate">
+      <div class="tftl-panel__header background-rand-2" xdata-i18n="Level">Experience</div>
+
+      <div class="tftl-panel__row background-rand-6">
+        <input type="number" name="attr_character_exp"/>
+      </div>
+    </div> <!-- sheet-exp-display -->
+
   </div> <!-- chrono-col3 -->
   
 </div> <!-- chrono-wrapper -->
