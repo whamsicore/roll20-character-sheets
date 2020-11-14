@@ -14,14 +14,14 @@
     
     <!-- Skill(BODY) -->
     <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(Body)</span>
+      <div class="tftl-panel__header background-rand-9 mid-bg dark-txt">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Full Body</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
           <input class="tftl-panel__input--hide" name="attr_body_skill_name" type="text"/>
-          <span class="tftl-panel__label--plus">+</span>
+          <!-- <span class="tftl-panel__label--plus">+</span> -->
           <input class="tftl-panel__input--item" name="attr_body_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -29,14 +29,14 @@
 
     <!-- Skill(CTR) -->
     <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9">
+      <div class="tftl-panel__header background-rand-9 dark-bg dark-txt">
         <span class="tftl-panel__left" xdata-i18n="Skills">Control</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
           <input class="tftl-panel__input--hide" name="attr_control_skill_name" type="text"/>
-          <span class="tftl-panel__label--plus">+</span>
+          <!-- <span class="tftl-panel__label--plus">+</span> -->
           <input class="tftl-panel__input--item" name="attr_control_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -44,14 +44,14 @@
 
     <!-- Skill(FLO) -->
     <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9">
+      <div class="tftl-panel__header background-rand-9 light-bg dark-txt">
         <span class="tftl-panel__left" xdata-i18n="Skills">Flow</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
           <input class="tftl-panel__input--hide" name="attr_flow_skill_name" type="text"/>
-          <span class="tftl-panel__label--plus">+</span>
+          <!-- <span class="tftl-panel__label--plus">+</span> -->
           <input class="tftl-panel__input--item" name="attr_flow_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -81,7 +81,7 @@
         <input class="tftl-panel__input--hide" name="attr_character_traumas" type="text" placeholder="Triggers/traumas"/>
       </div>
     </div> <!-- character-info -->
-    
+
   </div> <!-- chrono-col1 -->
   
   <div class="chrono-col2">
@@ -89,7 +89,7 @@
       <div class="tftl-attributes tftl-panel--alternate">
         <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Body</div>
 
-        <div class="tftl-panel__row background-rand-6 dark-bg">
+        <div class="tftl-panel__row background-rand-6 dark-bg dark-txt">
           <button 
             class="tftl-panel__label--button" 
             xdata-i18n="Control" 
@@ -99,7 +99,7 @@
           <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
         </div> <!-- control button -->
 
-        <div class="tftl-panel__row background-rand-6 light-bg">
+        <div class="tftl-panel__row background-rand-6 light-bg dark-txt">
           <button 
             class="tftl-panel__label--button" 
             xdata-i18n="Flow" 
@@ -124,7 +124,7 @@
       <!-- pain display  -->
       <div class="tftl-attributes tftl-panel--alternate">
         <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Pain(<span name="attr_pain"></span>)</div>
-        <div class="tftl-panel__row tftl-experience background-rand-1 light-bg"> 
+        <div class="tftl-panel__row tftl-experience background-rand-1 light-bg dark-txt"> 
           <input class="tftl-panel__input--small" name="attr_pain" xplaceholder="25" title="@{attr_pain}" type="number">
           <span class="minmax-display-divide"> / </span>
           <span class="tftl-panel__input--small" name="attr_desire" xplaceholder="25"> </span>
@@ -167,7 +167,7 @@
       <div class="tftl-attributes tftl-panel--full tftl-panel--alternate">
         <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Spirit</div>
 
-        <div class="tftl-panel__row background-rand-6 dark-bg">
+        <div class="tftl-panel__row background-rand-6 dark-bg dark-txt">
           <button 
             class="tftl-panel__label--button" 
             xdata-i18n="Desire" 
@@ -177,7 +177,7 @@
           <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
         </div> <!-- desire button -->
 
-        <div class="tftl-panel__row background-rand-6 light-bg">
+        <div class="tftl-panel__row background-rand-6 light-bg dark-txt">
           <button 
             class="tftl-panel__label--button" 
             xdata-i18n="Empathy" 
@@ -194,7 +194,7 @@
       <div class="tftl-attributes tftl-panel--alternate">
         <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Mind</div>
 
-        <div class="tftl-panel__row background-rand-6 dark-bg">
+        <div class="tftl-panel__row background-rand-6 dark-bg dark-txt">
           <button 
             class="tftl-panel__label--button" 
             xdata-i18n="Logic" 
@@ -204,7 +204,7 @@
           <input class="tftl-panel__input--small" name="attr_logic" type="number" value="0"/>
         </div> <!-- Logic button -->
         
-        <div class="tftl-panel__row background-rand-6 light-bg">
+        <div class="tftl-panel__row background-rand-6 light-bg dark-txt">
           <button 
             class="tftl-panel__label--button" 
             xdata-i18n="Vibe" 
@@ -229,7 +229,7 @@
       <!-- fear display -->
       <div class="tftl-attributes tftl-panel--alternate">
         <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Fear(<span name="attr_fear"></span>)</div>
-        <div class="tftl-panel__row tftl-experience background-rand-1 dark-bg"> 
+        <div class="tftl-panel__row tftl-experience background-rand-1 dark-bg dark-txt"> 
           <input class="tftl-panel__input--small" name="attr_fear" xplaceholder="25" title="@{attr_fear}" type="number">
           <span class="minmax-display-divide"> / </span>
           <span class="tftl-panel__input--small" name="attr_empathy" xplaceholder="25"> </span>
@@ -297,14 +297,14 @@
   <div class="chrono-col3">
     <!-- Skill(MIND) -->
     <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(MIND)</span>
+      <div class="tftl-panel__header background-rand-9 mid-bg dark-txt">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Full Mind</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
           <input class="tftl-panel__input--hide" name="attr_mind_skill_name" type="text"/>
-          <span class="tftl-panel__label--plus">+</span>
+          <!-- <span class="tftl-panel__label--plus">+</span> -->
           <input class="tftl-panel__input--item" name="attr_mind_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -312,14 +312,14 @@
 
     <!-- Skill(LOG) -->
     <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9">
+      <div class="tftl-panel__header background-rand-9 dark-bg dark-txt">
         <span class="tftl-panel__left" xdata-i18n="Skills">Logic</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
           <input class="tftl-panel__input--hide" name="attr_logic_skill_name" type="text"/>
-          <span class="tftl-panel__label--plus">+</span>
+          <!-- <span class="tftl-panel__label--plus">+</span> -->
           <input class="tftl-panel__input--item" name="attr_logic_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -327,14 +327,14 @@
 
     <!-- Skill(VIB) -->
     <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9">
+      <div class="tftl-panel__header background-rand-9 light-bg dark-txt">
         <span class="tftl-panel__left" xdata-i18n="Skills">Vibe</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
           <input class="tftl-panel__input--hide" name="attr_vibe_skill_name" type="text"/>
-          <span class="tftl-panel__label--plus">+</span>
+          <!-- <span class="tftl-panel__label--plus">+</span> -->
           <input class="tftl-panel__input--item" name="attr_vibe_skill_type" type="number" value="0"/>
         </div>
       </fieldset>

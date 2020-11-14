@@ -186,6 +186,12 @@
 .charsheet .sheet-dark-bg {
   background-color: #f95867; /*darker hue*/
 }
+.charsheet .sheet-mid-bg {
+  background-color: #b7bf3c; /*darker hue*/
+}
+.charsheet .sheet-dark-txt span {
+  color: #000;
+}
 .charsheet .sheet-tftl-panel__row--span1 {
   padding: 0;
   padding-left: 0.35em;
