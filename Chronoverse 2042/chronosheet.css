@@ -93,7 +93,9 @@
 .charsheet .sheet-chrono-panel .itemcontrol, .charsheet .sheet-chrono-panel--alternate .itemcontrol, .charsheet .sheet-chrono-panel--full .itemcontrol, .charsheet .sheet-chrono-panel--fullheight .itemcontrol {
   position: relative;
 }
-.charsheet .sheet-chrono-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--alternate .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--full .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--fullheight .itemcontrol button.repcontrol_del,
+.charsheet .sheet-chrono-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--alternate .itemcontrol button.repcontrol_del, 
+.charsheet .sheet-chrono-panel--full .itemcontrol button.repcontrol_del, 
+.charsheet .sheet-chrono-panel--fullheight .itemcontrol button.repcontrol_del,
 .charsheet .sheet-chrono-panel .itemcontrol a.repcontrol_move,
 .charsheet .sheet-chrono-panel--alternate .itemcontrol a.repcontrol_move,
 .charsheet .sheet-chrono-panel--full .itemcontrol a.repcontrol_move,
@@ -112,23 +114,35 @@
   text-shadow: none;
   font-weight: bold;
 }
-.charsheet .sheet-chrono-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--alternate .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--full .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--fullheight .itemcontrol button.repcontrol_del {
+.charsheet .sheet-chrono-panel .itemcontrol button.repcontrol_del, 
+.charsheet .sheet-chrono-panel--alternate .itemcontrol button.repcontrol_del, 
+.charsheet .sheet-chrono-panel--full .itemcontrol button.repcontrol_del, 
+.charsheet .sheet-chrono-panel--fullheight .itemcontrol button.repcontrol_del {
   margin-right: 0.25rem;
   background: #a00;
   color: #fff;
 }
-.charsheet .sheet-chrono-panel .itemcontrol a.repcontrol_move, .charsheet .sheet-chrono-panel--alternate .itemcontrol a.repcontrol_move, .charsheet .sheet-chrono-panel--full .itemcontrol a.repcontrol_move, .charsheet .sheet-chrono-panel--fullheight .itemcontrol a.repcontrol_move {
+.charsheet .sheet-chrono-panel .itemcontrol a.repcontrol_move, 
+.charsheet .sheet-chrono-panel--alternate .itemcontrol a.repcontrol_move, 
+.charsheet .sheet-chrono-panel--full .itemcontrol a.repcontrol_move, 
+.charsheet .sheet-chrono-panel--fullheight .itemcontrol a.repcontrol_move {
   margin-left: 0.25rem;
   background: #fff;
   color: #000;
 }
-.charsheet .sheet-chrono-panel .repcontrol, .charsheet .sheet-chrono-panel--alternate .repcontrol, .charsheet .sheet-chrono-panel--full .repcontrol, .charsheet .sheet-chrono-panel--fullheight .repcontrol {
+.charsheet .sheet-chrono-panel .repcontrol, 
+.charsheet .sheet-chrono-panel--alternate .repcontrol, 
+.charsheet .sheet-chrono-panel--full .repcontrol, 
+.charsheet .sheet-chrono-panel--fullheight .repcontrol {
   padding: 0.25em;
   background-color: #fbb888;
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 807px 362px;
 }
-.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_add, .charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_add, .charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_add, .charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_add,
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_add, 
+.charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_add, 
+.charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_add, 
+.charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_add,
 .charsheet .sheet-chrono-panel .repcontrol button.repcontrol_del,
 .charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_del,
 .charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_del,
@@ -154,18 +168,18 @@
   line-height: 1em;
   text-shadow: none;
 }
-.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_add:before, .charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_add:before, .charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_add:before, .charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_add:before {
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_add:before, 
+.charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_add:before, 
+.charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_add:before, 
+.charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_add:before {
   display: block;
   content: "&";
   font-family: "Pictos";
   font-size: 12pt;
   font-weight: bold;
 }
-.charsheet .sheet-chrono-panel 
-.repcontrol button.repcontrol_edit:before, 
-.charsheet 
-.sheet-chrono-panel--alternate 
-.repcontrol button.repcontrol_edit:before, 
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_edit:before, 
+.charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_edit:before, 
 .charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_edit:before, 
 .charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_edit:before {
   display: block;
