@@ -12,26 +12,28 @@
   <div class="tftl-logo"><img src="https://i.imgur.com/hncOnkZ.jpg"/></div>
   <div class="chrono-col1">
     <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-2" data-i18n="Attributes">Attributes</div>
+      <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Spirit</div>
       <div class="tftl-panel__row background-rand-6">
         <button 
           class="tftl-panel__label--button" 
-          xdata-i18n="Control" 
+          xdata-i18n="Desire" 
           type="roll" 
-          value="&amp;{template:tftl} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
+          value="&amp;{template:tftl} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
         </button>
-        <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
-      </div> <!-- control button -->
+        <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
+      </div> <!-- desire button -->
+
       <div class="tftl-panel__row background-rand-6">
         <button 
           class="tftl-panel__label--button" 
-          xdata-i18n="Flow" 
+          xdata-i18n="Empathy" 
           type="roll" 
-          value="&amp;{template:tftl} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
+          value="&amp;{template:tftl} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
         </button>
-        <input class="tftl-panel__input--small" name="attr_flow" type="number" value="0"/>
-      </div> <!-- flow button -->
-      
+        <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
+      </div> <!-- empathy button -->
+  
+      <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Mind</div>
       <div class="tftl-panel__row background-rand-6">
         <button 
           class="tftl-panel__label--button" 
@@ -52,31 +54,32 @@
         <input class="tftl-panel__input--small" name="attr_vibe" type="number" value="0"/>
       </div> <!-- Vibe button -->
 
-      <div class="tftl-panel__row background-rand-6">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Desire" 
-          type="roll" 
-          value="&amp;{template:tftl} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
-        </button>
-        <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
-      </div> <!-- desire button -->
+      <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Body</div>
 
       <div class="tftl-panel__row background-rand-6">
         <button 
           class="tftl-panel__label--button" 
-          xdata-i18n="Empathy" 
+          xdata-i18n="Control" 
           type="roll" 
-          value="&amp;{template:tftl} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
+          value="&amp;{template:tftl} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
         </button>
-        <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
-      </div> <!-- empathy button -->
+        <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
+      </div> <!-- control button -->
+      <div class="tftl-panel__row background-rand-6">
+        <button 
+          class="tftl-panel__label--button" 
+          xdata-i18n="Flow" 
+          type="roll" 
+          value="&amp;{template:tftl} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
+        </button>
+        <input class="tftl-panel__input--small" name="attr_flow" type="number" value="0"/>
+      </div> <!-- flow button -->
     </div> <!-- tftl-panel--alternate attributes container -->
 
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Items">Skills</span>
-        <span class="tftl-panel__right" xdata-i18n="Bonus">Type</span>
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skills</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
