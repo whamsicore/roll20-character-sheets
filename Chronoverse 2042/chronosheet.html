@@ -9,10 +9,10 @@
 <input name="attr_sheet_version" type="hidden"/>
 
 <div class="chrono-wrapper">
-  <img class="tftl-logo" src="https://i.imgur.com/dHQ6x3o.png"/>
+  <img class="chrono-logo" src="https://i.imgur.com/dHQ6x3o.png"/>
   <div class="chrono-col1">
     
-    <!-- Skill(BODY) -->
+    <!-- Skill(Body) -->
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 mid-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Full Body</span>
@@ -57,7 +57,7 @@
       </fieldset>
     </div> <!-- Skill(FLO) -->
 
-    <div class="chrono-panel--full tftl-character-info full-panel">
+    <div class="chrono-panel--full chrono-character-info full-panel">
       <div class="chrono-panel__row--span2 chrono-panel__row--type rand-bg-3">
         <!-- <strong class="chrono-panel__label--small chrono-panel__label" xdata-i18n="Type">Politic</strong> -->
         <input class="chrono-panel__input--hide" name="attr_politic" type="text" placeholder="Political alignment" />
@@ -86,7 +86,7 @@
   
   <div class="chrono-col2">
     <div class="chrono-col21">
-      <div class="tftl-attributes chrono-panel--alternate">
+      <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Body</div>
 
         <div class="chrono-panel__row rand-bg-6 dark-bg dark-txt">
@@ -94,7 +94,7 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Control" 
             type="roll" 
-            value="&amp;{template:tftl} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
+            value="&amp;{template:chrono} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
           </button>
           <input class="chrono-panel__input--small" name="attr_control" type="number" value="0"/>
         </div> <!-- control button -->
@@ -104,13 +104,13 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Flow" 
             type="roll" 
-            value="&amp;{template:tftl} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
+            value="&amp;{template:chrono} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
           </button>
           <input class="chrono-panel__input--small" name="attr_flow" type="number" value="0"/>
         </div> <!-- flow button -->
       </div> <!-- Body attributes -->
 
-      <div class="tftl-attributes chrono-panel--alternate">
+      <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Hitpoints">Hitpoint</div>
 
         <div class="chrono-panel__row rand-bg-6">
@@ -122,7 +122,7 @@
       </div> <!-- sheet-hitpoint-display -->
 
       <!-- pain display  -->
-      <div class="tftl-attributes chrono-panel--alternate">
+      <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-10" xdata-i18n="Suffering">Pain(<span name="attr_pain"></span>)</div>
         <div class="chrono-panel__row tftl-experience rand-bg-1 light-bg dark-txt"> 
           <input class="chrono-panel__input--small" name="attr_pain" xplaceholder="25" title="@{attr_pain}" type="number">
@@ -142,7 +142,7 @@
       </div>
 
       <!-- Spirit attributes -->
-      <div class="tftl-attributes chrono-panel--full chrono-panel--alternate">
+      <div class="chrono-panel--full chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Spirit</div>
 
         <div class="chrono-panel__row rand-bg-6 dark-bg dark-txt">
@@ -150,7 +150,7 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Desire" 
             type="roll" 
-            value="&amp;{template:tftl} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
+            value="&amp;{template:chrono} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
           </button>
           <input class="chrono-panel__input--small" name="attr_desire" type="number" value="0"/>
         </div> <!-- desire button -->
@@ -160,7 +160,7 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Empathy" 
             type="roll" 
-            value="&amp;{template:tftl} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
+            value="&amp;{template:chrono} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
           </button>
           <input class="chrono-panel__input--small" name="attr_empathy" type="number" value="0"/>
         </div> <!-- empathy button -->
@@ -169,7 +169,7 @@
     </div> <!-- chrono-col22 -->
 
     <div class="chrono-col23">
-      <div class="tftl-attributes chrono-panel--alternate">
+      <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Mind</div>
 
         <div class="chrono-panel__row rand-bg-6 dark-bg dark-txt">
@@ -177,7 +177,7 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Logic" 
             type="roll" 
-            value="&amp;{template:tftl} {{action_name=Logic}} {{character_name=@{character_name}}} {{roll=[[[[@{logic}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{logic}}} {{stat_title=Logic}} {{bonus_dice=?{Bonus Dice|0}}} "> Logic
+            value="&amp;{template:chrono} {{action_name=Logic}} {{character_name=@{character_name}}} {{roll=[[[[@{logic}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{logic}}} {{stat_title=Logic}} {{bonus_dice=?{Bonus Dice|0}}} "> Logic
           </button>
           <input class="chrono-panel__input--small" name="attr_logic" type="number" value="0"/>
         </div> <!-- Logic button -->
@@ -187,13 +187,13 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Vibe" 
             type="roll" 
-            value="&amp;{template:tftl} {{action_name=Vibe}} {{character_name=@{character_name}}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{vibe}}} {{stat_title=Vibe}} {{bonus_dice=?{Bonus Dice|0}}} "> Vibe
+            value="&amp;{template:chrono} {{action_name=Vibe}} {{character_name=@{character_name}}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{vibe}}} {{stat_title=Vibe}} {{bonus_dice=?{Bonus Dice|0}}} "> Vibe
           </button>
           <input class="chrono-panel__input--small" name="attr_vibe" type="number" value="0"/>
         </div> <!-- Vibe button -->
       </div> <!-- Mind Attributes -->
 
-      <div class="tftl-attributes chrono-panel--alternate">
+      <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Hitpoints">Energy </div>
 
         <div class="chrono-panel__row rand-bg-9">
@@ -205,7 +205,7 @@
       </div> <!-- sheet-energy-display -->
 
       <!-- fear display -->
-      <div class="tftl-attributes chrono-panel--alternate">
+      <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-10" xdata-i18n="Suffering">Fear(<span name="attr_fear"></span>)</div>
         <div class="chrono-panel__row tftl-experience rand-bg-1 dark-bg dark-txt"> 
           <input class="chrono-panel__input--small" name="attr_fear" xplaceholder="25" title="@{attr_fear}" type="number">
@@ -299,7 +299,7 @@
       </fieldset>
     </div> <!-- Skill(VIB) -->
 
-    <div class="tftl-attributes chrono-panel--alternate">
+    <div class="chrono-panel--alternate">
       <div class="chrono-panel__header rand-bg-2" xdata-i18n="Level">Level</div>
 
       <div class="chrono-panel__row rand-bg-6">
@@ -307,7 +307,7 @@
       </div>
     </div> <!-- sheet-level-display -->
 
-    <div class="tftl-attributes chrono-panel--alternate">
+    <div class="chrono-panel--alternate">
       <div class="chrono-panel__header rand-bg-2" xdata-i18n="Level">Experience</div>
 
       <div class="chrono-panel__row rand-bg-6">
@@ -319,8 +319,8 @@
   
 </div> <!-- chrono-wrapper -->
 
-<rolltemplate class="sheet-rolltemplate-tftl">
-  <div class="sheet-tftl-container">
+<rolltemplate class="sheet-rolltemplate-chrono">
+  <div class="sheet-chrono-container">
     {{#action_name}}
       <h1>{{action_name}}</h1>
     {{/action_name}}
@@ -329,44 +329,44 @@
       <h2>{{character_name}} </h2>
     {{/character_name}}
 
-    <div class="sheet-tftl-body">
+    <div class="sheet-chrono-body">
       {{#stat_value}}
-        <div class="sheet-tftl-roll-row"><span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>
+        <div class="sheet-chrono-roll-row"><span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>
       {{/stat_value}}
       
       {{#skill_value}}
-        <div class="sheet-tftl-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>
+        <div class="sheet-chrono-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>
       {{/skill_value}}
 
       {{#bonus_dice}}
-        <div class="sheet-tftl-roll-row">
+        <div class="sheet-chrono-roll-row">
           <span>+</span>
           <span data-i18n="Bonus">Bonus</span>
           <span>({{bonus_dice}}) </span>
         </div>
       {{/bonus_dice}}
 
-      <div class="sheet-tftl-roll-row">
+      <div class="sheet-chrono-roll-row">
         <span xdata-i18n="Bonus">Energy</span>
         <span>({{energy}}) </span> / <span>({{energyMax}}) </span> 
       </div>
       
     </div>
-    <div class="sheet-tftl-roll">
+    <div class="sheet-chrono-roll">
       <span>{{roll}}</span> <span>Successes</span>
     </div>
 
-    <div class="sheet-tftl-buttons">
+    <div class="sheet-chrono-buttons">
       {{spirit_button}}
-      <div class="sheet-tftl-buttontext" 
+      <div class="sheet-chrono-buttontext" 
         xdata-i18n="Push with your Spirit!">
         Push with your Spirit!
       </div>
     </div>
 
-    <div class="sheet-tftl-footer"></div>
+    <div class="sheet-chrono-footer"></div>
 
-  </div> <!-- sheet-tftl-container -->
+  </div> <!-- sheet-chrono-container -->
 </rolltemplate>
 
 <script type="text/worker">
