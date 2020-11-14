@@ -1,7 +1,7 @@
 <button 
   name="roll_reroll_push" 
   type="roll" 
-  value="&amp;{template:tftl} {{name=Push}} {{character_name=@{character_name}}} {{desire=@{desire}}} {{empathy=@{empathy}}} {{roll=[[[[@{desire}]]d6&gt;6]]}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --energy|[[-1-]]!!!">
+  value="&amp;{template:chrono} {{name=Push}} {{character_name=@{character_name}}} {{desire=@{desire}}} {{empathy=@{empathy}}} {{roll=[[[[@{desire}]]d6&gt;6]]}} !modattr --silent --charid @{character_id} --energy|[[-1-]]!!! {{energy=[[@{energy}-1]]}} {{energyMax=@{energy|max}}}">
 </button>
 
 <input data-i18n-value="Reroll" name="attr_spirit_button" type="hidden" value="Spirit Push"/>
