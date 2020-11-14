@@ -89,21 +89,6 @@
         </div>
       </fieldset>
     </div>
-
-    <div class="tftl-panel--full">
-      <div class="tftl-panel__header background-rand-5" data-i18n="Relationships">Relationships</div>
-      <fieldset class="repeating_relationships">
-        <div class="tftl-panel__row--relationship background-rand-5">
-          <select class="tftl-panel__label--select" name="attr_relationship_type">
-            <option data-i18n="PC">PC</option>
-            <option data-i18n="NPC">NPC</option>
-          </select>
-          <input class="tftl-panel__input--hide" name="attr_relationship" type="text"/>
-        </div>
-      </fieldset>
-    </div>
-
-
   </div> <!-- chrono-col1 -->
 
   
@@ -167,18 +152,13 @@
       </div>
     </div> <!-- fear container  -->
 
-    <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9"><span class="tftl-panel__left" data-i18n="Items">Items</span><span class="tftl-panel__right" data-i18n="Bonus">Bonus</span></div>
-      <div class="tftl-panel__row--iconic background-rand-6"><span class="tftl-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
-        <input class="tftl-panel__input--hide" name="attr_iconic_item" type="text"/><span class="tftl-panel__label--value">+2</span>
+    <div class="tftl-panel--fullheight">
+      <div class="tftl-panel__header background-rand-1" data-i18n="Hideout">Hideout</div>
+      <div class="tftl-panel__row--textarea background-rand-1">
+        <textarea class="tftl-panel__textarea--full" name="attr_hideout"></textarea>
       </div>
-      <fieldset class="repeating_item">
-        <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_item_name" type="text"/><span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
-        </div>
-      </fieldset>
     </div>
+
   </div> <!-- chrono-col2 -->
 
   <div class="chrono-col3">
@@ -230,12 +210,40 @@
       </div>
     </div> <!-- tftl-character -->
 
-    <div class="tftl-panel--fullheight">
-      <div class="tftl-panel__header background-rand-1" data-i18n="Hideout">Hideout</div>
-      <div class="tftl-panel__row--textarea background-rand-1">
-        <textarea class="tftl-panel__textarea--full" name="attr_hideout"></textarea>
+    <!-- chrono-items -->
+    <div class="tftl-panel tftl-panel--full">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" data-i18n="Items">Items</span>
+        <span class="tftl-panel__right" data-i18n="Bonus">Bonus</span>
       </div>
-    </div>
+      <div class="tftl-panel__row--iconic background-rand-6"><span class="tftl-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
+        <input class="tftl-panel__input--hide" name="attr_iconic_item" type="text"/><span class="tftl-panel__label--value">+2</span>
+      </div>
+      <fieldset class="repeating_item">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_item_name" type="text"/><span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- chrono-items -->
+
+    <!-- chrono-relationships -->
+    <div class="tftl-panel--full">
+      <div class="tftl-panel__header background-rand-5" xdata-i18n="Relationships">
+        <span class="tftl-panel__left" xdata-i18n="Items">Relationships</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Connection</span>
+      </div>
+      <fieldset class="repeating_relationships">
+        <div class="tftl-panel__row--relationship background-rand-5">
+          <select class="tftl-panel__label--select" name="attr_relationship_type">
+            <option data-i18n="PC">PC</option>
+            <option data-i18n="NPC">NPC</option>
+          </select>
+          <input class="tftl-panel__input--hide" name="attr_relationship" type="text"/>
+          <input class="tftl-panel__input--item" name="attr_relationship_connection" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- chrono-relationships -->
 
     <div class="tftl-panel--full">
       <div class="tftl-panel__header background-rand-9" data-i18n="Notes">Notes</div>
