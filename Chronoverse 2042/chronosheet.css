@@ -574,5 +574,6 @@ input[type="radio"]:checked ~ input[type="radio"] + span::before {
 
 .charsheet .sheet-tftl-logo {
   background-color: #000;   
-  height: 250px;
+  /*height: 250px;*/
+  width:100%;
 }
