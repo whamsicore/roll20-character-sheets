@@ -70,7 +70,7 @@
 }
 
 
-.charsheet .sheet-tftl-panel, .charsheet .sheet-tftl-panel--fullheight, .charsheet .sheet-tftl-panel--full, .charsheet .sheet-tftl-panel--alternate {
+.charsheet .sheet-chrono-panel, .charsheet .sheet-chrono-panel--fullheight, .charsheet .sheet-chrono-panel--full, .charsheet .sheet-chrono-panel--alternate {
   display: grid;
   grid-template-rows: 3em;
   gap: 1px;
@@ -79,21 +79,21 @@
   background: #000;
 }
 
-.charsheet .sheet-tftl-panel--full {
+.charsheet .sheet-chrono-panel--full {
   grid-column: 1/-1;
 } /*custom*/
 
-.charsheet .sheet-tftl-panel--fullheight {
+.charsheet .sheet-chrono-panel--fullheight {
   align-self: stretch;
 }
-.charsheet .sheet-tftl-panel .itemcontrol, .charsheet .sheet-tftl-panel--alternate .itemcontrol, .charsheet .sheet-tftl-panel--full .itemcontrol, .charsheet .sheet-tftl-panel--fullheight .itemcontrol {
+.charsheet .sheet-chrono-panel .itemcontrol, .charsheet .sheet-chrono-panel--alternate .itemcontrol, .charsheet .sheet-chrono-panel--full .itemcontrol, .charsheet .sheet-chrono-panel--fullheight .itemcontrol {
   position: relative;
 }
-.charsheet .sheet-tftl-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-tftl-panel--alternate .itemcontrol button.repcontrol_del, .charsheet .sheet-tftl-panel--full .itemcontrol button.repcontrol_del, .charsheet .sheet-tftl-panel--fullheight .itemcontrol button.repcontrol_del,
-.charsheet .sheet-tftl-panel .itemcontrol a.repcontrol_move,
-.charsheet .sheet-tftl-panel--alternate .itemcontrol a.repcontrol_move,
-.charsheet .sheet-tftl-panel--full .itemcontrol a.repcontrol_move,
-.charsheet .sheet-tftl-panel--fullheight .itemcontrol a.repcontrol_move {
+.charsheet .sheet-chrono-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--alternate .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--full .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--fullheight .itemcontrol button.repcontrol_del,
+.charsheet .sheet-chrono-panel .itemcontrol a.repcontrol_move,
+.charsheet .sheet-chrono-panel--alternate .itemcontrol a.repcontrol_move,
+.charsheet .sheet-chrono-panel--full .itemcontrol a.repcontrol_move,
+.charsheet .sheet-chrono-panel--fullheight .itemcontrol a.repcontrol_move {
   display: block;
   top: calc(50% - 1.5rem);
   position: relative;
@@ -108,35 +108,35 @@
   text-shadow: none;
   font-weight: bold;
 }
-.charsheet .sheet-tftl-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-tftl-panel--alternate .itemcontrol button.repcontrol_del, .charsheet .sheet-tftl-panel--full .itemcontrol button.repcontrol_del, .charsheet .sheet-tftl-panel--fullheight .itemcontrol button.repcontrol_del {
+.charsheet .sheet-chrono-panel .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--alternate .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--full .itemcontrol button.repcontrol_del, .charsheet .sheet-chrono-panel--fullheight .itemcontrol button.repcontrol_del {
   margin-right: 0.25rem;
   background: #a00;
   color: #fff;
 }
-.charsheet .sheet-tftl-panel .itemcontrol a.repcontrol_move, .charsheet .sheet-tftl-panel--alternate .itemcontrol a.repcontrol_move, .charsheet .sheet-tftl-panel--full .itemcontrol a.repcontrol_move, .charsheet .sheet-tftl-panel--fullheight .itemcontrol a.repcontrol_move {
+.charsheet .sheet-chrono-panel .itemcontrol a.repcontrol_move, .charsheet .sheet-chrono-panel--alternate .itemcontrol a.repcontrol_move, .charsheet .sheet-chrono-panel--full .itemcontrol a.repcontrol_move, .charsheet .sheet-chrono-panel--fullheight .itemcontrol a.repcontrol_move {
   margin-left: 0.25rem;
   background: #fff;
   color: #000;
 }
-.charsheet .sheet-tftl-panel .repcontrol, .charsheet .sheet-tftl-panel--alternate .repcontrol, .charsheet .sheet-tftl-panel--full .repcontrol, .charsheet .sheet-tftl-panel--fullheight .repcontrol {
+.charsheet .sheet-chrono-panel .repcontrol, .charsheet .sheet-chrono-panel--alternate .repcontrol, .charsheet .sheet-chrono-panel--full .repcontrol, .charsheet .sheet-chrono-panel--fullheight .repcontrol {
   padding: 0.25em;
   background-color: #fbb888;
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 807px 362px;
 }
-.charsheet .sheet-tftl-panel .repcontrol button.repcontrol_add, .charsheet .sheet-tftl-panel--alternate .repcontrol button.repcontrol_add, .charsheet .sheet-tftl-panel--full .repcontrol button.repcontrol_add, .charsheet .sheet-tftl-panel--fullheight .repcontrol button.repcontrol_add,
-.charsheet .sheet-tftl-panel .repcontrol button.repcontrol_del,
-.charsheet .sheet-tftl-panel--alternate .repcontrol button.repcontrol_del,
-.charsheet .sheet-tftl-panel--full .repcontrol button.repcontrol_del,
-.charsheet .sheet-tftl-panel--fullheight .repcontrol button.repcontrol_del,
-.charsheet .sheet-tftl-panel .repcontrol button.repcontrol_move,
-.charsheet .sheet-tftl-panel--alternate .repcontrol button.repcontrol_move,
-.charsheet .sheet-tftl-panel--full .repcontrol button.repcontrol_move,
-.charsheet .sheet-tftl-panel--fullheight .repcontrol button.repcontrol_move,
-.charsheet .sheet-tftl-panel .repcontrol button.repcontrol_edit,
-.charsheet .sheet-tftl-panel--alternate .repcontrol button.repcontrol_edit,
-.charsheet .sheet-tftl-panel--full .repcontrol button.repcontrol_edit,
-.charsheet .sheet-tftl-panel--fullheight .repcontrol button.repcontrol_edit {
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_add, .charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_add, .charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_add, .charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_add,
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_del,
+.charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_del,
+.charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_del,
+.charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_del,
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_move,
+.charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_move,
+.charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_move,
+.charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_move,
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_edit,
+.charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_edit,
+.charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_edit,
+.charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_edit {
   display: block;
   border: 1px solid #000;
   border-radius: 0;
@@ -150,20 +150,20 @@
   line-height: 1em;
   text-shadow: none;
 }
-.charsheet .sheet-tftl-panel .repcontrol button.repcontrol_add:before, .charsheet .sheet-tftl-panel--alternate .repcontrol button.repcontrol_add:before, .charsheet .sheet-tftl-panel--full .repcontrol button.repcontrol_add:before, .charsheet .sheet-tftl-panel--fullheight .repcontrol button.repcontrol_add:before {
+.charsheet .sheet-chrono-panel .repcontrol button.repcontrol_add:before, .charsheet .sheet-chrono-panel--alternate .repcontrol button.repcontrol_add:before, .charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_add:before, .charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_add:before {
   display: block;
   content: "&";
   font-family: "Pictos";
   font-size: 12pt;
   font-weight: bold;
 }
-.charsheet .sheet-tftl-panel 
+.charsheet .sheet-chrono-panel 
 .repcontrol button.repcontrol_edit:before, 
 .charsheet 
-.sheet-tftl-panel--alternate 
+.sheet-chrono-panel--alternate 
 .repcontrol button.repcontrol_edit:before, 
-.charsheet .sheet-tftl-panel--full .repcontrol button.repcontrol_edit:before, 
-.charsheet .sheet-tftl-panel--fullheight .repcontrol button.repcontrol_edit:before {
+.charsheet .sheet-chrono-panel--full .repcontrol button.repcontrol_edit:before, 
+.charsheet .sheet-chrono-panel--fullheight .repcontrol button.repcontrol_edit:before {
   display: block;
   content: "p";
   right: 5px;
@@ -171,7 +171,7 @@
   font-size: 12pt;
   font-weight: bold;
 }
-.charsheet .sheet-tftl-panel__header {
+.charsheet .sheet-chrono-panel__header {
   padding: 0.5em;
   background: #000;
   color: #fff;
@@ -179,15 +179,15 @@
   font-size: 1.25em;
   text-transform: uppercase;
 }
-.charsheet .sheet-tftl-panel__row, 
-.charsheet .sheet-tftl-panel__row--textarea, 
+.charsheet .sheet-chrono-panel__row, 
+.charsheet .sheet-chrono-panel__row--textarea, 
 .charsheet .sheet-chrono-panel__row--item, 
 .charsheet .sheet-chrono-panel__row--skill, 
-.charsheet .sheet-tftl-panel__row--iconic, 
-.charsheet .sheet-tftl-panel__row--relationship, 
-.charsheet .sheet-tftl-panel__row--luck, 
-.charsheet .sheet-tftl-panel__row--span2, 
-.charsheet .sheet-tftl-panel__row--span1 {
+.charsheet .sheet-chrono-panel__row--iconic, 
+.charsheet .sheet-chrono-panel__row--relationship, 
+.charsheet .sheet-chrono-panel__row--luck, 
+.charsheet .sheet-chrono-panel__row--span2, 
+.charsheet .sheet-chrono-panel__row--span1 {
   display: flex;
   align-items: center;
   min-height: 3em;
@@ -206,26 +206,26 @@
 .charsheet .sheet-dark-txt span {
   color: #000;
 }
-.charsheet .sheet-tftl-panel__row--span1 {
+.charsheet .sheet-chrono-panel__row--span1 {
   padding: 0;
   padding-left: 0.35em;
 }
-.charsheet .sheet-tftl-panel__row--span2 {
+.charsheet .sheet-chrono-panel__row--span2 {
   grid-column: span 2;
   padding: 0;
   padding-left: 0.35em;
 }
-.charsheet .sheet-tftl-panel__row--luck {
+.charsheet .sheet-chrono-panel__row--luck {
   background-color: #fbb888;
 }
-.charsheet .sheet-tftl-panel__row--relationship {
+.charsheet .sheet-chrono-panel__row--relationship {
   padding: 0;
   padding-left: 0.35em;
   display: grid;
   grid-template-columns: 4.5em 1fr;
   border-bottom: 1px solid #000;
 }
-.charsheet .sheet-tftl-panel__row--iconic {
+.charsheet .sheet-chrono-panel__row--iconic {
   padding: 0;
   padding-left: 0.35em;
   background: #ffd998;
@@ -252,21 +252,21 @@
   border-bottom: 1px solid #000;
 }
 
-.charsheet .sheet-tftl-panel__row--textarea {
+.charsheet .sheet-chrono-panel__row--textarea {
   padding: 0;
   align-self: stretch;
 }
-.charsheet .sheet-tftl-panel__label, .charsheet .sheet-tftl-panel__label--plus, .charsheet .sheet-tftl-panel__label--value, .charsheet .sheet-tftl-panel__label--select, .charsheet .sheet-tftl-panel__label--small, .charsheet .sheet-tftl-panel__label--button {
+.charsheet .sheet-chrono-panel__label, .charsheet .sheet-chrono-panel__label--plus, .charsheet .sheet-chrono-panel__label--value, .charsheet .sheet-chrono-panel__label--select, .charsheet .sheet-chrono-panel__label--small, .charsheet .sheet-chrono-panel__label--button {
   flex-shrink: 0;
   flex-grow: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12pt;
 }
-.charsheet .sheet-tftl-panel__label:before, .charsheet .sheet-tftl-panel__label--plus:before, .charsheet .sheet-tftl-panel__label--value:before, .charsheet .sheet-tftl-panel__label--select:before, .charsheet .sheet-tftl-panel__label--small:before, .charsheet .sheet-tftl-panel__label--button:before {
+.charsheet .sheet-chrono-panel__label:before, .charsheet .sheet-chrono-panel__label--plus:before, .charsheet .sheet-chrono-panel__label--value:before, .charsheet .sheet-chrono-panel__label--select:before, .charsheet .sheet-chrono-panel__label--small:before, .charsheet .sheet-chrono-panel__label--button:before {
   display: none;
 }
-.charsheet .sheet-tftl-panel__label--button {
+.charsheet .sheet-chrono-panel__label--button {
   margin: 0 !important;
   padding: 0 !important;
   border: 0;
@@ -275,20 +275,20 @@
   text-shadow: none;
   text-align: left;
 }
-.charsheet .sheet-tftl-panel__label--button:hover {
+.charsheet .sheet-chrono-panel__label--button:hover {
   color: #f00;
 }
-.charsheet .sheet-tftl-panel__label--small {
+.charsheet .sheet-chrono-panel__label--small {
   margin-bottom: 1em;
   font-size: 8pt;
   font-weight: bold;
   text-transform: uppercase;
 }
-.charsheet .sheet-tftl-panel__label--small:after {
+.charsheet .sheet-chrono-panel__label--small:after {
   display: inline;
   content: ":";
 }
-.charsheet .sheet-tftl-panel__label--select {
+.charsheet .sheet-chrono-panel__label--select {
   -webkit-appearance: none;
   -moz-appearance: none;
   margin: 0;
@@ -307,30 +307,30 @@
   font-weight: 700;
   font-size: 12pt;
 }
-.charsheet .sheet-tftl-panel__label--select:hover {
+.charsheet .sheet-chrono-panel__label--select:hover {
   cursor: pointer;
   background-color: rgba(177, 125, 29, 0.2);
 }
-.charsheet .sheet-tftl-panel__label--value {
+.charsheet .sheet-chrono-panel__label--value {
   width: 3em;
   text-align: center;
 }
-.charsheet .sheet-tftl-panel__label--plus {
+.charsheet .sheet-chrono-panel__label--plus {
   width: 1em;
   text-align: center;
 }
-.charsheet .sheet-tftl-panel__right {
+.charsheet .sheet-chrono-panel__right {
   float: right;
   padding-top: 3pt;
   font-size: 8pt;
 }
-.charsheet .sheet-tftl-panel__input, 
-.charsheet .sheet-tftl-panel__textarea--full, 
-.charsheet .sheet-tftl-panel__input--hide[type=text], 
-.charsheet .sheet-tftl-panel__input--hide[type=number], 
-.charsheet .sheet-tftl-panel__input--small[type=text], 
+.charsheet .sheet-chrono-panel__input, 
+.charsheet .sheet-chrono-panel__textarea--full, 
+.charsheet .sheet-chrono-panel__input--hide[type=text], 
+.charsheet .sheet-chrono-panel__input--hide[type=number], 
+.charsheet .sheet-chrono-panel__input--small[type=text], 
 .charsheet [type=text].sheet-chrono-panel__input--item, 
-.charsheet .sheet-tftl-panel__input--small[type=number], 
+.charsheet .sheet-chrono-panel__input--small[type=number], 
 .charsheet [type=number].sheet-chrono-panel__input--item,
 .charsheet [type=number].sheet-chrono-panel__input--skill {
   flex-shrink: 1;
@@ -339,16 +339,16 @@
   font-weight: bold;
   font-family: sans-serif;
 }
-.charsheet .sheet-tftl-panel__input--small[type=text], 
+.charsheet .sheet-chrono-panel__input--small[type=text], 
 .charsheet [type=text].sheet-chrono-panel__input--item, 
-.charsheet .sheet-tftl-panel__input--small[type=number], 
+.charsheet .sheet-chrono-panel__input--small[type=number], 
 .charsheet [type=number].sheet-chrono-panel__input--item,
 .charsheet [type=number].sheet-chrono-panel__input--skill {
   width: 3em;
   border: 1px solid #000;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
-.charsheet .sheet-tftl-panel__input--hide[type=text], .charsheet .sheet-tftl-panel__input--hide[type=number] {
+.charsheet .sheet-chrono-panel__input--hide[type=text], .charsheet .sheet-chrono-panel__input--hide[type=number] {
   cursor: pointer;
   background: transparent;
   border: none;
@@ -359,7 +359,7 @@
   text-align: center;
 }
 
-.charsheet .sheet-tftl-panel__input--hide[type=text]:hover, .charsheet .sheet-tftl-panel__input--hide[type=number]:hover {
+.charsheet .sheet-chrono-panel__input--hide[type=text]:hover, .charsheet .sheet-chrono-panel__input--hide[type=number]:hover {
   background-color: rgba(177, 125, 29, 0.2);
 }
 
@@ -368,7 +368,7 @@
   width: 2em;
   text-align: center;
 }
-.charsheet .sheet-tftl-panel__textarea {
+.charsheet .sheet-chrono-panel__textarea {
   border-radius: 0;
   margin-bottom: 0;
   min-height: 9em;
@@ -377,7 +377,7 @@
   font-family: sans-serif;
   resize: vertical;
 }
-.charsheet .sheet-tftl-panel__textarea--full {
+.charsheet .sheet-chrono-panel__textarea--full {
   cursor: pointer;
   margin-bottom: 0;
   min-height: 100%;
@@ -385,7 +385,7 @@
   background: transparent;
   border: none;
 }
-.charsheet .sheet-tftl-panel__textarea--full:hover {
+.charsheet .sheet-chrono-panel__textarea--full:hover {
   background-color: rgba(177, 125, 29, 0.2);
 }
 .charsheet .sheet-tftl-character-info {
@@ -396,94 +396,60 @@
 .charsheet .sheet-tftl-experience {
   justify-content: space-around;
 }
-.charsheet .sheet-tftl-experience .sheet-tftl-checkbox__show {
-  height: 1.35em;
-  width: 1.35em;
-}
-.charsheet .sheet-tftl-checks {
-  flex-grow: 1;
-  flex-basis: 50%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 0.25em;
-}
-.charsheet .sheet-tftl-checkbox {
-  flex-shrink: 1;
-  flex-basis: 2em;
-  display: grid;
-  align-items: center;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
-.charsheet .sheet-tftl-checkbox__hide {
-  display: none;
-}
-.charsheet .sheet-tftl-checkbox__show {
-  display: block;
-  height: 1.5em;
-  width: 1.5em;
-  min-height: 1.5em;
-  min-width: 1.5em;
-  border: 1px solid #000;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-}
 .charsheet .sheet-tftl-checkbox__hide:checked ~ .sheet-tftl-checkbox__show {
   background: #fff url("https://s3.amazonaws.com/files.d20.io/images/138210119/cvUNlZk3lj7GZXQEsKIBWw/med.png?1590443685") no-repeat center/cover;
 }
 
-.charsheet .sheet-chrono-wrapper .sheet-tftl-panel__row--age input[type=number] {
+.charsheet .sheet-chrono-wrapper .sheet-chrono-panel__row--age input[type=number] {
   width: 100%;
 }
 
-.sheet-background-rand-1 {
+.sheet-rand-bg-1 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 619px 367px;
 }
 
-.sheet-background-rand-2 {
+.sheet-rand-bg-2 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 379px 714px;
 }
 
-.sheet-background-rand-3 {
+.sheet-rand-bg-3 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 126px 32px;
 }
 
-.sheet-background-rand-4 {
+.sheet-rand-bg-4 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 9px 747px;
 }
 
-.sheet-background-rand-5 {
+.sheet-rand-bg-5 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 581px 60px;
 }
 
-.sheet-background-rand-6 {
+.sheet-rand-bg-6 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 272px 7px;
 }
 
-.sheet-background-rand-7 {
+.sheet-rand-bg-7 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 813px 650px;
 }
 
-.sheet-background-rand-8 {
+.sheet-rand-bg-8 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 656px 107px;
 }
 
-.sheet-background-rand-9 {
+.sheet-rand-bg-9 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 86px 296px;
 }
 
-.sheet-background-rand-10 {
+.sheet-rand-bg-10 {
   background-image: url("https://s3.amazonaws.com/files.d20.io/images/138241818/X-IF-unPzBqgqH1xwbbqsQ/max.png?1590450700");
   background-position: 211px 315px;
 }
