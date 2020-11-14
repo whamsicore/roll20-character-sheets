@@ -12,20 +12,19 @@
   <img class="chrono-logo" src="https://i.imgur.com/dHQ6x3o.png"/>
   <div class="chrono-col1">
     
-    <!-- Skill(Body) -->
+    <!-- Full Body -->
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 mid-bg dark-txt">
-        <span class="chrono-panel__left" xdata-i18n="Skills">Full Body</span>
+        <span class="chrono-panel__left" xdata-i18n="Skills">Body</span>
         <span class="chrono-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="chrono-panel__row--item chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_body_skill_name" type="text"/>
-          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--skill" name="attr_body_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
-    </div> <!-- Skill(Body) -->
+    </div> <!-- Body -->
 
     <!-- Skill(CTR) -->
     <div class="chrono-panel">
@@ -36,7 +35,6 @@
       <fieldset class="repeating_skill">
         <div class="chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_control_skill_name" type="text"/>
-          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--skill" name="attr_control_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -51,7 +49,6 @@
       <fieldset class="repeating_skill">
         <div class="chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_flow_skill_name" type="text"/>
-          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--skill" name="attr_flow_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -59,7 +56,6 @@
 
     <div class="chrono-panel--full chrono-character-info full-panel">
       <div class="chrono-panel__row--span2 chrono-panel__row--type rand-bg-3">
-        <!-- <strong class="chrono-panel__label--small chrono-panel__label" xdata-i18n="Type">Politic</strong> -->
         <input class="chrono-panel__input--hide" name="attr_politic" type="text" placeholder="Political alignment" />
         <!-- <select class="chrono-panel__input--hide" name="attr_politic">
           <option value="Futurist" checked>Futurist</option>
@@ -67,17 +63,14 @@
         </select> -->
       </div>
       <div class="chrono-panel__row--span2 chrono-panel__row--name rand-bg-10">
-        <!-- <strong class="chrono-panel__label--small chrono-panel__label" xdata-i18n="Name">Problem</strong> -->
         <input class="chrono-panel__input--hide" name="attr_character_problem" type="text" placeholder="Life problems" />
       </div>
 
       <div class="chrono-panel__row--span2 chrono-panel__row--name rand-bg-10">
-        <!-- <strong class="chrono-panel__label--small chrono-panel__label" xdata-i18n="Name">Goal</strong> -->
         <input class="chrono-panel__input--hide" name="attr_character_goal" type="text" placeholder="Goals/Aspirations"/>
       </div>
 
       <div class="chrono-panel__row--span2 chrono-panel__row--name rand-bg-10">
-        <!-- <strong class="chrono-panel__label--small chrono-panel__label" xdata-i18n="Name">Traumas</strong> -->
         <input class="chrono-panel__input--hide" name="attr_character_traumas" type="text" placeholder="Triggers/traumas"/>
       </div>
     </div> <!-- character-info -->
@@ -136,9 +129,10 @@
     <div class="chrono-col22">
       <div class="chrono-panel--full">
         <div class="chrono-panel__row--span2 chrono-panel__row--name rand-bg-10">
-          <input class="chrono-panel__input--hide centered-text" name="attr_character_name" type="text" placeholder="Name"/>
+          <input class="chrono-panel__input--hide centered-text" name="attr_character_name" type="text" placeholder="Your Name"/>
         </div>
-        <img src="https://i.imgur.com/IkT2zPU.png"/>
+        <img src="https://i.imgur.com/IkT2zPU.png"/> <!-- ICON: meditating man -->
+        <img src="@{control}"/> <!-- ICON: meditating man -->
       </div>
 
       <!-- Spirit attributes -->
@@ -219,16 +213,17 @@
     <div class="chrono-panel chrono-panel--full">
       <div class="chrono-panel__header rand-bg-9">
         <span class="chrono-panel__left" xdata-i18n="Items">Items</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">Bonus</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">Qty</span>
       </div>
-      <div class="chrono-panel__row--iconic rand-bg-6">
+      <!-- <div class="chrono-panel__row--iconic rand-bg-6">
         <span class="chrono-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
         <input class="chrono-panel__input--hide" name="attr_iconic_item" type="text"/>
         <span class="chrono-panel__label--value">+2</span>
-      </div>
+      </div> -->
       <fieldset class="repeating_item">
         <div class="chrono-panel__row--item rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_item_name" type="text"/><span class="chrono-panel__label--plus">+</span>
+          <input class="chrono-panel__input--hide" name="attr_item_name" type="text"/>
+          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
         </div>
       </fieldset>
@@ -241,7 +236,7 @@
         <span class="chrono-panel__right" xdata-i18n="Bonus">Connection</span>
       </div>
       <fieldset class="repeating_relationships">
-        <div class="chrono-panel__row--item rand-bg-5">
+        <div class="chrono-panel__row--item chrono-panel__row--relationship rand-bg-5">
           <select class="chrono-panel__label--select" name="attr_relationship_type">
             <option data-i18n="PC">PC</option>
             <option data-i18n="NPC">NPC</option>
@@ -254,20 +249,19 @@
   </div> <!-- chrono-col2 -->
 
   <div class="chrono-col3">
-    <!-- Skill(MIND) -->
+    <!-- Full MIND -->
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 mid-bg dark-txt">
-        <span class="chrono-panel__left" xdata-i18n="Skills">Full Mind</span>
+        <span class="chrono-panel__left" xdata-i18n="Skills">Mind</span>
         <span class="chrono-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_mind_skill_name" type="text"/>
-          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--skill" name="attr_mind_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
-    </div> <!-- Skill(MIND) -->
+    </div> <!-- Full MIND -->
 
     <!-- Skill(LOG) -->
     <div class="chrono-panel">
@@ -278,7 +272,6 @@
       <fieldset class="repeating_skill">
         <div class="chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_logic_skill_name" type="text"/>
-          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--skill" name="attr_logic_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
@@ -293,7 +286,6 @@
       <fieldset class="repeating_skill">
         <div class="chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_vibe_skill_name" type="text"/>
-          <!-- <span class="chrono-panel__label--plus">+</span> -->
           <input class="chrono-panel__input--skill" name="attr_vibe_skill_type" type="number" value="0"/>
         </div>
       </fieldset>

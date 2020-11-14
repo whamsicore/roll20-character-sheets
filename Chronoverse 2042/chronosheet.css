@@ -209,9 +209,9 @@
   padding: 0;
   padding-left: 0.35em;
 }
-.charsheet .sheet-chrono-panel__row--luck {
+/*.charsheet .sheet-chrono-panel__row--luck {
   background-color: #fbb888;
-}
+}*/
 .charsheet .sheet-chrono-panel__row--relationship {
   padding: 0;
   padding-left: 0.35em;
@@ -219,14 +219,14 @@
   grid-template-columns: 4.5em 1fr;
   border-bottom: 1px solid #000;
 }
-.charsheet .sheet-chrono-panel__row--iconic {
+/*.charsheet .sheet-chrono-panel__row--iconic {
   padding: 0;
   padding-left: 0.35em;
   background: #ffd998;
-}
+}*/
 .charsheet .sheet-chrono-panel__row--item {
   display: grid;
-  grid-template-columns: 1fr 1em 4em;
+  grid-template-columns: 1fr 4em;
   padding: 0;
   padding-left: 0.35em;
   border-bottom: 1px solid #000;
