@@ -120,7 +120,7 @@
         <div class="chrono-panel__row tftl-experience rand-bg-1 light-bg dark-txt"> 
           <input class="chrono-panel__input--small" name="attr_pain" xplaceholder="25" title="@{attr_pain}" type="number">
           <span class="minmax-display-divide"> / </span>
-          <input type="number" name="attr_desire" disabled="true" />
+          <input type="number" name="attr_pain_tolerance" disabled="true" value="@{desire}"/>
         </div>
       </div> <!-- pain display  -->
 
@@ -204,7 +204,7 @@
         <div class="chrono-panel__row tftl-experience rand-bg-1 dark-bg dark-txt"> 
           <input class="chrono-panel__input--small" name="attr_fear" xplaceholder="25" title="@{attr_fear}" type="number">
           <span class="minmax-display-divide"> / </span>
-          <input type="number" name="attr_empathy" disabled="true" />
+          <input type="number" name="attr_fear_tolerance" disabled="true" value="@{empathy}"/>
         </div>
       </div> <!-- fear display  -->
     </div> <!-- chrono-col23 -->
@@ -292,7 +292,7 @@
     </div> <!-- Skill(VIB) -->
 
     <div class="chrono-panel--alternate">
-      <div class="chrono-panel__header rand-bg-2" xdata-i18n="Level">Level</div>
+      <div class="chrono-panel__header rand-bg-2" xdata-i18n="Character Level">Level</div>
 
       <div class="chrono-panel__row rand-bg-6">
         <input type="number" name="attr_character_level" value="@{control}*2+@{flow}*2+@{logic}*2+@{vibe}*2+@{desire}*5+@{empathy}*5" disabled="true" />
