@@ -7,9 +7,10 @@
 <input data-i18n-value="Reroll" name="attr_spirit_button" type="hidden" value="Spirit Push"/>
 
 <input name="attr_sheet_version" type="hidden"/>
-<div class="tftl-wrapper">
+
+<div class="chrono-wrapper">
   <div class="tftl-logo"><img src="https://i.imgur.com/hncOnkZ.jpg"/></div>
-  <div class="tftl-leftcol">
+  <div class="chrono-col1">
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-2" data-i18n="Attributes">Attributes</div>
       <div class="tftl-panel__row background-rand-6">
@@ -70,7 +71,40 @@
         </button>
         <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
       </div> <!-- empathy button -->
+    </div> <!-- tftl-panel--alternate attributes container -->
+
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" xdata-i18n="Items">Skills</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Type</span>
+      </div>
+      <fieldset class="repeating_skill">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+        </div>
+      </fieldset>
     </div>
+
+    <div class="tftl-panel--full">
+      <div class="tftl-panel__header background-rand-5" data-i18n="Relationships">Relationships</div>
+      <fieldset class="repeating_relationships">
+        <div class="tftl-panel__row--relationship background-rand-5">
+          <select class="tftl-panel__label--select" name="attr_relationship_type">
+            <option data-i18n="PC">PC</option>
+            <option data-i18n="NPC">NPC</option>
+          </select>
+          <input class="tftl-panel__input--hide" name="attr_relationship" type="text"/>
+        </div>
+      </fieldset>
+    </div>
+
+
+  </div> <!-- chrono-col1 -->
+
+  
+  <div class="chrono-col2">
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Hitpoint/Energy</div>
 
@@ -94,7 +128,7 @@
         <input class="tftl-panel__input--small" name="attr_energy_max" xplaceholder="25" title="@{attr_energy_max}" type="number">
       </div>
 
-    </div> <!-- sheet-attribute-display -->
+    </div> <!-- sheet-hitpoint-display -->
 
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Pain(<span name="attr_pain"></span>)</div>
@@ -130,10 +164,21 @@
       </div>
     </div> <!-- fear container  -->
 
-  </div> <!-- tftl-leftcol -->
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9"><span class="tftl-panel__left" data-i18n="Items">Items</span><span class="tftl-panel__right" data-i18n="Bonus">Bonus</span></div>
+      <div class="tftl-panel__row--iconic background-rand-6"><span class="tftl-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
+        <input class="tftl-panel__input--hide" name="attr_iconic_item" type="text"/><span class="tftl-panel__label--value">+2</span>
+      </div>
+      <fieldset class="repeating_item">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_item_name" type="text"/><span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div>
+  </div> <!-- chrono-col2 -->
 
-  
-  <div class="tftl-rightcol">
+  <div class="chrono-col3">
     <div class="tftl-panel--full tftl-character">
       <div class="tftl-panel__row--span1 tftl-panel__row--name background-rand-10">
         <strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Name">Name</strong>
@@ -180,45 +225,25 @@
       <div class="tftl-panel__row--span1 tftl-panel__row--anchor background-rand-10"><strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Anchor">Anchor</strong>
         <input class="tftl-panel__input--hide" name="attr_anchor" type="text"/>
       </div>
-    </div>
-    <div class="tftl-panel--full">
-      <div class="tftl-panel__header background-rand-5" data-i18n="Relationships">Relationships</div>
-      <fieldset class="repeating_relationships">
-        <div class="tftl-panel__row--relationship background-rand-5">
-          <select class="tftl-panel__label--select" name="attr_relationship_type">
-            <option data-i18n="PC">PC</option>
-            <option data-i18n="NPC">NPC</option>
-          </select>
-          <input class="tftl-panel__input--hide" name="attr_relationship" type="text"/>
-        </div>
-      </fieldset>
-    </div>
-    <div class="tftl-panel">
-      <div class="tftl-panel__header background-rand-9"><span class="tftl-panel__left" data-i18n="Items">Items</span><span class="tftl-panel__right" data-i18n="Bonus">Bonus</span></div>
-      <div class="tftl-panel__row--iconic background-rand-6"><span class="tftl-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
-        <input class="tftl-panel__input--hide" name="attr_iconic_item" type="text"/><span class="tftl-panel__label--value">+2</span>
-      </div>
-      <fieldset class="repeating_item">
-        <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_item_name" type="text"/><span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
-        </div>
-      </fieldset>
-    </div>
+    </div> <!-- tftl-character -->
+
     <div class="tftl-panel--fullheight">
       <div class="tftl-panel__header background-rand-1" data-i18n="Hideout">Hideout</div>
       <div class="tftl-panel__row--textarea background-rand-1">
         <textarea class="tftl-panel__textarea--full" name="attr_hideout"></textarea>
       </div>
     </div>
+
     <div class="tftl-panel--full">
       <div class="tftl-panel__header background-rand-9" data-i18n="Notes">Notes</div>
       <div class="tftl-panel__row--textarea background-rand-6">
         <textarea class="tftl-panel__textarea--full" name="attr_notes"></textarea>
       </div>
     </div>
-  </div> <!-- tftl-rightcol -->
-</div> <!-- tftl-wrapper -->
+
+  </div> <!-- chrono-col3 -->
+</div> <!-- chrono-wrapper -->
+
 <rolltemplate class="sheet-rolltemplate-tftl">
   <div class="sheet-tftl-container">
     {{#action_name}}
