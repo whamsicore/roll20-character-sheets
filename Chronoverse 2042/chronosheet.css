@@ -58,9 +58,9 @@
   gap: 1em;
 }
 
-/*.charsheet .sheet-chrono-col2 .sheet-chrono-full-panel {
+.charsheet .sheet-chrono-full-panel {
   grid-column: 1/ -1;
-}*/
+}
 
 .charsheet .sheet-chrono-col3 {
   display: grid;
@@ -301,6 +301,8 @@
   border: none;
   height: 100%;
   width: 100%;
+}
+.charsheet .sheet-tftl-panel__input--hide .sheet-centered-text{
   text-align: center;
 }
 .charsheet .sheet-tftl-panel__input--hide[type=text]:hover, .charsheet .sheet-tftl-panel__input--hide[type=number]:hover {

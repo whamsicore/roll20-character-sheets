@@ -56,6 +56,32 @@
         </div>
       </fieldset>
     </div> <!-- Skill(FLO) -->
+
+    <div class="tftl-panel--full tftl-character-info full-panel">
+      <div class="tftl-panel__row--span2 tftl-panel__row--type background-rand-3">
+        <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Type">Politic</strong> -->
+        <input class="tftl-panel__input--hide" name="attr_politic" type="text" placeholder="Political alignment" />
+        <!-- <select class="tftl-panel__input--hide" name="attr_politic">
+          <option value="Futurist" checked>Futurist</option>
+          <option value="Humanist">Humanist</option>
+        </select> -->
+      </div>
+      <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+        <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Problem</strong> -->
+        <input class="tftl-panel__input--hide" name="attr_character_problem" type="text" placeholder="Life problems" />
+      </div>
+
+      <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+        <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Goal</strong> -->
+        <input class="tftl-panel__input--hide" name="attr_character_goal" type="text" placeholder="Goals/Aspirations"/>
+      </div>
+
+      <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+        <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Traumas</strong> -->
+        <input class="tftl-panel__input--hide" name="attr_character_traumas" type="text" placeholder="Triggers/traumas"/>
+      </div>
+    </div> <!-- character-info -->
+    
   </div> <!-- chrono-col1 -->
   
   <div class="chrono-col2">
@@ -132,7 +158,7 @@
     <div class="chrono-col22">
       <div class="tftl-panel--full">
         <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
-          <input class="tftl-panel__input--hide" name="attr_character_name" type="text" placeholder="Name"/>
+          <input class="tftl-panel__input--hide centered-text" name="attr_character_name" type="text" placeholder="Name"/>
         </div>
         <img src="https://i.imgur.com/IkT2zPU.png"/>
       </div>
@@ -161,32 +187,6 @@
           <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
         </div> <!-- empathy button -->
       </div> <!-- Spirit attributes -->
-
-      <div class="tftl-panel--full tftl-character-info">
-        <div class="tftl-panel__row--span2 tftl-panel__row--type background-rand-3">
-          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Type">Politic</strong> -->
-          <input class="tftl-panel__input--hide" name="attr_politic" type="text" placeholder="Political alignment" />
-          <!-- <select class="tftl-panel__input--hide" name="attr_politic">
-            <option value="Futurist" checked>Futurist</option>
-            <option value="Humanist">Humanist</option>
-          </select> -->
-        </div>
-        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
-          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Problem</strong> -->
-          <input class="tftl-panel__input--hide" name="attr_character_problem" type="text" placeholder="Life problems" />
-        </div>
-
-        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
-          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Goal</strong> -->
-          <input class="tftl-panel__input--hide" name="attr_character_goal" type="text" placeholder="Goals/Aspirations"/>
-        </div>
-
-        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
-          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Traumas</strong> -->
-          <input class="tftl-panel__input--hide" name="attr_character_traumas" type="text" placeholder="Triggers/traumas"/>
-        </div>
-
-      </div> <!-- character-info -->
 
     </div> <!-- chrono-col22 -->
 
@@ -258,13 +258,40 @@
       </div> <!-- fear display  -->
     </div> <!-- chrono-col23 -->
 
-    <div class="tftl-panel--fullheight">
-      <div class="tftl-panel__header background-rand-1" data-i18n="Hideout">Hideout</div>
-      <div class="tftl-panel__row--textarea background-rand-1">
-        <textarea class="tftl-panel__textarea--full" name="attr_hideout"></textarea>
+    <!-- chrono-items -->
+    <div class="tftl-panel tftl-panel--full">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" data-i18n="Items">Items</span>
+        <span class="tftl-panel__right" data-i18n="Bonus">Bonus</span>
       </div>
-    </div>
-    
+      <div class="tftl-panel__row--iconic background-rand-6"><span class="tftl-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
+        <input class="tftl-panel__input--hide" name="attr_iconic_item" type="text"/><span class="tftl-panel__label--value">+2</span>
+      </div>
+      <fieldset class="repeating_item">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_item_name" type="text"/><span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- chrono-items -->
+
+    <!-- chrono-relationships -->
+    <div class="tftl-panel--full">
+      <div class="tftl-panel__header background-rand-5" xdata-i18n="Relationships">
+        <span class="tftl-panel__left" xdata-i18n="Items">Relationships</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Connection</span>
+      </div>
+      <fieldset class="repeating_relationships">
+        <div class="tftl-panel__row--relationship background-rand-5">
+          <select class="tftl-panel__label--select" name="attr_relationship_type">
+            <option data-i18n="PC">PC</option>
+            <option data-i18n="NPC">NPC</option>
+          </select>
+          <input class="tftl-panel__input--hide" name="attr_relationship" type="text"/>
+          <input class="tftl-panel__input--item" name="attr_relationship_connection" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- chrono-relationships -->
   </div> <!-- chrono-col2 -->
 
   <div class="chrono-col3">
