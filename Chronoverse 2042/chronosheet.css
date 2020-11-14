@@ -2,7 +2,10 @@
 .sheet-hidden {
   display: none;
 }
-
+.charsheet {
+  width: 100%;
+  padding: 0 !important;
+}
 .charsheet .sheet-chrono-wrapper {
   display: grid;
   grid-template-columns: 1.3fr 3fr 1.3fr;
@@ -20,7 +23,13 @@
   width: 2.5em;
   -moz-appearance: textfield;
 }
-.charsheet .sheet-chrono-wrapper input[type=number]::-webkit-outer-spin-button, .charsheet .sheet-chrono-wrapper input[type=number]::-webkit-inner-spin-button {
+.charsheet .sheet-chrono-wrapper input[type=number] .chrono-panel__input--skill { /*custom*/
+  width: 2em;
+  height:2em;
+  font-size: 8px;
+}
+.charsheet .sheet-chrono-wrapper input[type=number]::-webkit-outer-spin-button, 
+.charsheet .sheet-chrono-wrapper input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -64,7 +73,8 @@
 }
 
 
-.charsheet .sheet-chrono-panel, .charsheet .sheet-chrono-panel--fullheight, .charsheet .sheet-chrono-panel--full, .charsheet .sheet-chrono-panel--alternate {
+.charsheet .sheet-chrono-panel, 
+.charsheet .sheet-chrono-panel--fullheight, .charsheet .sheet-chrono-panel--full, .charsheet .sheet-chrono-panel--alternate {
   display: grid;
   grid-template-rows: 3em;
   gap: 1px;
@@ -188,6 +198,11 @@
   padding: 0.35em;
   background-color: #fff; /*notes area*/
 }
+.charsheet .sheet-chrono-wrapper input[type=number] .chrono-panel__input--skill { /*custom*/
+  width: 2em;
+  height:2em;
+  font-size: 8px;
+}
 .charsheet .sheet-light-bg {
   background-color: #8abcf9; /*lighter hue*/
 }
@@ -233,7 +248,7 @@
 }
 .charsheet .sheet-chrono-panel__row--skill {
   display: grid;
-  grid-template-columns: 1fr 3em;
+  grid-template-columns: 1fr 2em 2em;
   padding: 0;
   padding-left: 0.35em;
   border-bottom: 1px solid #000;
