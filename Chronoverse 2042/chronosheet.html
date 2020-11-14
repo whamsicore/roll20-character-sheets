@@ -70,7 +70,7 @@
         </button>
         <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
       </div> <!-- empathy button -->
-
+    </div>
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Hitpoint/Energy</div>
 
@@ -93,34 +93,9 @@
         <span class="minmax-display-divide">/  </span>
         <input class="tftl-panel__input--small" name="attr_energy_max" xplaceholder="25" title="@{attr_energy_max}" type="number">
       </div>
-      <!-- 
-      <div class="minmax-display">
-        <div class="minmax-display-wrapper edit-show">
-        </div> -->
 
-        <!-- <div class="sheet-minmax-display-wrapper sheet-edit-show">
-          <label data-i18n-title="current hitpoints input" title="current hitpoints input">
-            <input class="sheet-npc-input-large" name="attr_hitpoints" xplaceholder="25" title="@{attr_hitpoints}" type="number">
-          </label><span class="sheet-minmax-display-divide">/  </span>
-          <label data-i18n-title="maximum hitpoints input" title="maximum hitpoints input">
-            <input class="sheet-npc-input-large" name="attr_hitpoints_max" xplaceholder="25" title="@{attr_hitpoints_max}" type="number">
-          </label>
-        </div> -->
-      </div> <!-- sheet-minmax-display -->
-      <!--<div class="sheet-minmax-display-toggles sheet-checkmark">
-        <label class="sheet-checkmark-item" data-i18n-title="major wound checkmark" title="major wound checkmark">
-          <input name="attr_major_wound" title="@{attr_major_wound}" type="checkbox"><strong data-i18n="major wound">major wound</strong>
-        </label>
-        <label class="sheet-checkmark-item" data-i18n-title="unconscious checkmark" title="unconscious checkmark">
-          <input name="attr_unconscious" title="@{attr_unconscious}" type="checkbox"><strong data-i18n="unconscious">unconscious</strong>
-        </label>
-        <label class="sheet-checkmark-item" data-i18n-title="dying checkmark" title="dying checkmark">
-          <input name="attr_dying" title="@{attr_dying}" type="checkbox"><strong data-i18n="dying">dying</strong>
-        </label>
-      </div> <!-- sheet-minmax-display-toggles -->
     </div> <!-- sheet-attribute-display -->
 
-    <!-- entry1 -->
     <div class="tftl-attributes tftl-panel--alternate">
       <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Suffering</div>
       <div class="tftl-panel__row tftl-experience background-rand-1"> 
@@ -157,14 +132,23 @@
       </div>
     </div> <!-- experience container  -->
   </div> <!-- tftl-leftcol -->
+  
   <div class="tftl-rightcol">
     <div class="tftl-panel--full tftl-character">
-      <div class="tftl-panel__row--span1 tftl-panel__row--name background-rand-10"><strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Name">Name</strong>
+      <div class="tftl-panel__row--span1 tftl-panel__row--name background-rand-10">
+        <strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Name">Name</strong>
         <input class="tftl-panel__input--hide" name="attr_character_name" type="text"/>
       </div>
-      <div class="tftl-panel__row--span1 tftl-panel__row--type background-rand-3"><strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Type">Politic</strong>
-        <input class="tftl-panel__input--hide" name="attr_type" type="text"/>
+      
+      <div class="tftl-panel__row--span1 tftl-panel__row--type background-rand-3">
+        <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Type">Politic</strong>
+        <input class="tftl-panel__input--hide" name="attr_politic" type="text"/>
+        <!-- <select class="tftl-panel__input--hide" name="attr_politic">
+          <option value="Futurist" checked>Futurist</option>
+          <option value="Humanist">Humanist</option>
+        </select> -->
       </div>
+
       <div class="tftl-panel__row--span1 tftl-panel__row--age background-rand-9">
         <strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Age">Age</strong>
         <input class="tftl-panel__input--hide" name="attr_age" type="number"/>
@@ -174,27 +158,7 @@
         <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Class">Class</strong>
         <input class="tftl-panel__input--hide" name="attr_class" type="text"/>
       </div>
-      <!-- <div class="tftl-panel__row--span1 tftl-panel__row--luck background-rand-4">
-        <strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Luck">Luck</strong>
-        <input class="tftl-panel__input--hide" name="attr_luck_max" type="number"/>
-        <div class="tftl-checks">
-          <label class="tftl-checkbox">
-            <input class="tftl-checkbox__hide" name="attr_luck_1" type="checkbox"/><span class="tftl-checkbox__show"> </span>
-          </label>
-          <label class="tftl-checkbox">
-            <input class="tftl-checkbox__hide" name="attr_luck_2" type="checkbox"/><span class="tftl-checkbox__show"> </span>
-          </label>
-          <label class="tftl-checkbox">
-            <input class="tftl-checkbox__hide" name="attr_luck_3" type="checkbox"/><span class="tftl-checkbox__show"> </span>
-          </label>
-          <label class="tftl-checkbox">
-            <input class="tftl-checkbox__hide" name="attr_luck_4" type="checkbox"/><span class="tftl-checkbox__show"> </span>
-          </label>
-          <label class="tftl-checkbox">
-            <input class="tftl-checkbox__hide" name="attr_luck_5" type="checkbox"/><span class="tftl-checkbox__show"> </span>
-          </label>
-        </div>
-      </div> -->
+      
       <div class="tftl-panel__row--span2 tftl-panel__row--drive background-rand-10"><strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Drive">Drive</strong>
         <input class="tftl-panel__input--hide" name="attr_drive" type="text"/>
       </div>
@@ -305,21 +269,37 @@
   </div> <!-- sheet-tftl-container -->
 </rolltemplate>
 
-<script type="text/worker">on("sheet:opened", eventInfo => {
+<script type="text/worker">
+  on("sheet:opened", eventInfo => {
     getAttrs(["sheet_version"], values => {
-        if (values["sheet_version"] !== "1") {
-            getAttrs(["song", "iconic", "totalluck"], values => {
-                const set_attrs = {};
+      if (values["sheet_version"] !== "1") {
+        getAttrs(["song", "iconic", "totalluck"], values => {
+          const set_attrs = {};
 
-                set_attrs["favourite_song"] = values["song"];
-                set_attrs["iconic_item"] = values["iconic"];
-                set_attrs["luck_max"] = values["totalluck"];
-                set_attrs["sheet_version"] = 1;
+          set_attrs["favourite_song"] = values["song"];
+          set_attrs["iconic_item"] = values["iconic"];
+          set_attrs["luck_max"] = values["totalluck"];
+          set_attrs["sheet_version"] = 1;
 
-                setAttrs(set_attrs);
-            })
+          setAttrs(set_attrs);
+        })
 
-        }
+      }
     })
-});
+  });
+
+  on('clicked:add', function() {
+    // console.log("payton was here");
+
+    getAttrs(['level'], function(values) {
+        // get the level stat, and coerce into a numerical value.
+        const level = +values.level || 0; 
+        // increase by 1
+        const newlevel = level +1;
+        // save the updated attribute to the sheet
+        setAttrs({
+           level: newlevel 
+        });
+   });
+  });
 </script>
