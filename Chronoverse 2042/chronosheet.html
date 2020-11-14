@@ -9,7 +9,7 @@
 <input name="attr_sheet_version" type="hidden"/>
 
 <div class="chrono-wrapper">
-  <img class="tftl-logo" src="https://i.imgur.com/sYac9vD.png"/>
+  <img class="tftl-logo" src="https://i.imgur.com/dHQ6x3o.png"/>
   <div class="chrono-col1">
     
     <!-- Skill(BODY) -->
@@ -20,9 +20,9 @@
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <input class="tftl-panel__input--hide" name="attr_body_skill_name" type="text"/>
           <span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+          <input class="tftl-panel__input--item" name="attr_body_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
     </div> <!-- Skill(Body) -->
@@ -30,14 +30,14 @@
     <!-- Skill(CTR) -->
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(CTR)</span>
+        <span class="tftl-panel__left" xdata-i18n="Skills">Control</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <input class="tftl-panel__input--hide" name="attr_control_skill_name" type="text"/>
           <span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+          <input class="tftl-panel__input--item" name="attr_control_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
     </div> <!-- Skill(CTR) -->
@@ -45,88 +45,218 @@
     <!-- Skill(FLO) -->
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(FLO)</span>
+        <span class="tftl-panel__left" xdata-i18n="Skills">Flow</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <input class="tftl-panel__input--hide" name="attr_flow_skill_name" type="text"/>
           <span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+          <input class="tftl-panel__input--item" name="attr_flow_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
     </div> <!-- Skill(FLO) -->
   </div> <!-- chrono-col1 -->
   
   <div class="chrono-col2">
-    <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Body</div>
+    <div class="chrono-col21">
+      <div class="tftl-attributes tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Body</div>
 
-      <div class="tftl-panel__row background-rand-6 dark-bg">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Control" 
-          type="roll" 
-          value="&amp;{template:tftl} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
-        </button>
-        <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
-      </div> <!-- control button -->
+        <div class="tftl-panel__row background-rand-6 dark-bg">
+          <button 
+            class="tftl-panel__label--button" 
+            xdata-i18n="Control" 
+            type="roll" 
+            value="&amp;{template:tftl} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
+          </button>
+          <input class="tftl-panel__input--small" name="attr_control" type="number" value="0"/>
+        </div> <!-- control button -->
 
-      <div class="tftl-panel__row background-rand-6 light-bg">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Flow" 
-          type="roll" 
-          value="&amp;{template:tftl} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
-        </button>
-        <input class="tftl-panel__input--small" name="attr_flow" type="number" value="0"/>
-      </div> <!-- flow button -->
-    </div> <!-- Body attributes -->
+        <div class="tftl-panel__row background-rand-6 light-bg">
+          <button 
+            class="tftl-panel__label--button" 
+            xdata-i18n="Flow" 
+            type="roll" 
+            value="&amp;{template:tftl} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
+          </button>
+          <input class="tftl-panel__input--small" name="attr_flow" type="number" value="0"/>
+        </div> <!-- flow button -->
+      </div> <!-- Body attributes -->
 
-    <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Hitpoint</div>
+      <div class="tftl-attributes tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Hitpoint</div>
 
-      <div class="tftl-panel__row background-rand-6">
-        <img class="heart-symbol" src="https://i.imgur.com/yxSrvMU.png"/>
-        <input class="tftl-panel__input--small" name="attr_hitpoint" xplaceholder="25" title="@{attr_hitpoint}" type="number">
-        <span class="minmax-display-divide"> / </span>
-        <input class="tftl-panel__input--small" name="attr_hitpoint_max" xplaceholder="25" title="@{attr_hitpoint_max}" type="number">
+        <div class="tftl-panel__row background-rand-6">
+          <img class="heart-symbol" src="https://i.imgur.com/yxSrvMU.png"/>
+          <input class="tftl-panel__input--small" name="attr_hitpoint" xplaceholder="25" title="@{attr_hitpoint}" type="number">
+          <span class="minmax-display-divide"> / </span>
+          <input class="tftl-panel__input--small" name="attr_hitpoint_max" xplaceholder="25" title="@{attr_hitpoint_max}" type="number">
+        </div>
+      </div> <!-- sheet-hitpoint-display -->
+
+      <!-- pain display  -->
+      <div class="tftl-attributes tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Pain(<span name="attr_pain"></span>)</div>
+        <div class="tftl-panel__row tftl-experience background-rand-1 light-bg"> 
+          <input class="tftl-panel__input--small" name="attr_pain" xplaceholder="25" title="@{attr_pain}" type="number">
+          <span class="minmax-display-divide"> / </span>
+          <span class="tftl-panel__input--small" name="attr_desire" xplaceholder="25"> </span>
+          <!-- <input class="tftl-panel__input--small" name="attr_pain_max" xplaceholder="25" title="@{attr_pain_max}" type="number"> -->
+          <!-- 
+          <input type="radio" name="attr_pain" value="0" checked="checked"><span></span>
+          <input type="radio" name="attr_pain" value="1"><span></span>
+          <input type="radio" name="attr_pain" value="2"><span></span>
+          <input type="radio" name="attr_pain" value="3"><span></span>
+          <input type="radio" name="attr_pain" value="4"><span></span>
+          <input type="radio" name="attr_pain" value="5"><span></span>
+          <input type="radio" name="attr_pain" value="6"><span></span>
+          <input type="radio" name="attr_pain" value="7"><span></span>
+          <input type="radio" name="attr_pain" value="8"><span></span>
+          <input type="radio" name="attr_pain" value="9"><span></span>
+          <input type="radio" name="attr_pain" value="10"><span></span>
+          <input type="radio" name="attr_pain" value="11"><span></span>
+          <input type="radio" name="attr_pain" value="12"><span></span>
+          <input type="radio" name="attr_pain" value="13"><span></span>
+          <input type="radio" name="attr_pain" value="14"><span></span>
+          <input type="radio" name="attr_pain" value="15"><span></span>
+          <input type="radio" name="attr_pain" value="16"><span></span>
+          <input type="radio" name="attr_pain" value="17"><span></span>
+          <input type="radio" name="attr_pain" value="18"><span></span>
+          <input type="radio" name="attr_pain" value="19"><span></span> -->
+        </div>
+      </div> <!-- pain display  -->
+
+    </div> <!-- chrono-col21 -->
+
+    <div class="chrono-col22">
+      <div class="tftl-panel--full">
+        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+          <input class="tftl-panel__input--hide" name="attr_character_name" type="text" placeholder="Name"/>
+        </div>
+        <img src="https://i.imgur.com/IkT2zPU.png"/>
       </div>
-    </div> <!-- sheet-hitpoint-display -->
 
-    <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Pain(<span name="attr_pain"></span>)</div>
-      <div class="tftl-panel__row tftl-experience background-rand-1 light-bg"> 
-        <input type="radio" name="attr_pain" value="0" checked="checked"><span></span>
-        <input type="radio" name="attr_pain" value="1"><span></span>
-        <input type="radio" name="attr_pain" value="2"><span></span>
-        <input type="radio" name="attr_pain" value="3"><span></span>
-        <input type="radio" name="attr_pain" value="4"><span></span>
-        <input type="radio" name="attr_pain" value="5"><span></span>
-        <input type="radio" name="attr_pain" value="6"><span></span>
-        <input type="radio" name="attr_pain" value="7"><span></span>
-        <input type="radio" name="attr_pain" value="8"><span></span>
-        <input type="radio" name="attr_pain" value="9"><span></span>
-        <input type="radio" name="attr_pain" value="10"><span></span>
-      </div>
-    </div> <!-- pain container  -->
+      <!-- Spirit attributes -->
+      <div class="tftl-attributes tftl-panel--full tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Spirit</div>
 
-    <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Fear(<span name="attr_fear"></span>)</div>
-      <div class="tftl-panel__row tftl-experience background-rand-1 dark-bg"> 
-        <input type="radio" name="attr_fear" value="0" checked="checked"><span></span>
-        <input type="radio" name="attr_fear" value="1"><span></span>
-        <input type="radio" name="attr_fear" value="2"><span></span>
-        <input type="radio" name="attr_fear" value="3"><span></span>
-        <input type="radio" name="attr_fear" value="4"><span></span>
-        <input type="radio" name="attr_fear" value="5"><span></span>
-        <input type="radio" name="attr_fear" value="6"><span></span>
-        <input type="radio" name="attr_fear" value="7"><span></span>
-        <input type="radio" name="attr_fear" value="8"><span></span>
-        <input type="radio" name="attr_fear" value="9"><span></span>
-        <input type="radio" name="attr_fear" value="10"><span></span>
-      </div>
-    </div> <!-- fear container  -->
+        <div class="tftl-panel__row background-rand-6 dark-bg">
+          <button 
+            class="tftl-panel__label--button" 
+            xdata-i18n="Desire" 
+            type="roll" 
+            value="&amp;{template:tftl} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
+          </button>
+          <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
+        </div> <!-- desire button -->
+
+        <div class="tftl-panel__row background-rand-6 light-bg">
+          <button 
+            class="tftl-panel__label--button" 
+            xdata-i18n="Empathy" 
+            type="roll" 
+            value="&amp;{template:tftl} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
+          </button>
+          <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
+        </div> <!-- empathy button -->
+      </div> <!-- Spirit attributes -->
+
+      <div class="tftl-panel--full tftl-character-info">
+        <div class="tftl-panel__row--span2 tftl-panel__row--type background-rand-3">
+          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Type">Politic</strong> -->
+          <input class="tftl-panel__input--hide" name="attr_politic" type="text" placeholder="Political alignment" />
+          <!-- <select class="tftl-panel__input--hide" name="attr_politic">
+            <option value="Futurist" checked>Futurist</option>
+            <option value="Humanist">Humanist</option>
+          </select> -->
+        </div>
+        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Problem</strong> -->
+          <input class="tftl-panel__input--hide" name="attr_character_problem" type="text" placeholder="Life problems" />
+        </div>
+
+        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Goal</strong> -->
+          <input class="tftl-panel__input--hide" name="attr_character_goal" type="text" placeholder="Goals/Aspirations"/>
+        </div>
+
+        <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
+          <!-- <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Name">Traumas</strong> -->
+          <input class="tftl-panel__input--hide" name="attr_character_traumas" type="text" placeholder="Triggers/traumas"/>
+        </div>
+
+      </div> <!-- character-info -->
+
+    </div> <!-- chrono-col22 -->
+
+    <div class="chrono-col23">
+      <div class="tftl-attributes tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Mind</div>
+
+        <div class="tftl-panel__row background-rand-6 dark-bg">
+          <button 
+            class="tftl-panel__label--button" 
+            xdata-i18n="Logic" 
+            type="roll" 
+            value="&amp;{template:tftl} {{action_name=Logic}} {{character_name=@{character_name}}} {{roll=[[[[@{logic}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{logic}}} {{stat_title=Logic}} {{bonus_dice=?{Bonus Dice|0}}} "> Logic
+          </button>
+          <input class="tftl-panel__input--small" name="attr_logic" type="number" value="0"/>
+        </div> <!-- Logic button -->
+        
+        <div class="tftl-panel__row background-rand-6 light-bg">
+          <button 
+            class="tftl-panel__label--button" 
+            xdata-i18n="Vibe" 
+            type="roll" 
+            value="&amp;{template:tftl} {{action_name=Vibe}} {{character_name=@{character_name}}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{vibe}}} {{stat_title=Vibe}} {{bonus_dice=?{Bonus Dice|0}}} "> Vibe
+          </button>
+          <input class="tftl-panel__input--small" name="attr_vibe" type="number" value="0"/>
+        </div> <!-- Vibe button -->
+      </div> <!-- Mind Attributes -->
+
+      <div class="tftl-attributes tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Energy </div>
+
+        <div class="tftl-panel__row background-rand-9">
+          <img class="lightning-symbol" src="https://i.imgur.com/gpv6fx1.png"/>
+          <input class="tftl-panel__input--small" name="attr_energy" xplaceholder="25" title="@{attr_energy}" type="number">
+          <span class="minmax-display-divide">/  </span>
+          <input class="tftl-panel__input--small" name="attr_energy_max" xplaceholder="25" title="@{attr_energy_max}" type="number">
+        </div>
+      </div> <!-- sheet-energy-display -->
+
+      <!-- fear display -->
+      <div class="tftl-attributes tftl-panel--alternate">
+        <div class="tftl-panel__header background-rand-10" xdata-i18n="Suffering">Fear(<span name="attr_fear"></span>)</div>
+        <div class="tftl-panel__row tftl-experience background-rand-1 dark-bg"> 
+          <input class="tftl-panel__input--small" name="attr_fear" xplaceholder="25" title="@{attr_fear}" type="number">
+          <span class="minmax-display-divide"> / </span>
+          <span class="tftl-panel__input--small" name="attr_empathy" xplaceholder="25"> </span>
+          <!-- 
+          <input type="radio" name="attr_fear" value="0" checked="checked"><span></span>
+          <input type="radio" name="attr_fear" value="1"><span></span>
+          <input type="radio" name="attr_fear" value="2"><span></span>
+          <input type="radio" name="attr_fear" value="3"><span></span>
+          <input type="radio" name="attr_fear" value="4"><span></span>
+          <input type="radio" name="attr_fear" value="5"><span></span>
+          <input type="radio" name="attr_fear" value="6"><span></span>
+          <input type="radio" name="attr_fear" value="7"><span></span>
+          <input type="radio" name="attr_fear" value="8"><span></span>
+          <input type="radio" name="attr_fear" value="9"><span></span>
+          <input type="radio" name="attr_fear" value="10"><span></span>
+          <input type="radio" name="attr_fear" value="11"><span></span>
+          <input type="radio" name="attr_fear" value="12"><span></span>
+          <input type="radio" name="attr_fear" value="13"><span></span>
+          <input type="radio" name="attr_fear" value="14"><span></span>
+          <input type="radio" name="attr_fear" value="15"><span></span>
+          <input type="radio" name="attr_fear" value="16"><span></span>
+          <input type="radio" name="attr_fear" value="17"><span></span>
+          <input type="radio" name="attr_fear" value="18"><span></span>
+          <input type="radio" name="attr_fear" value="19"><span></span> -->
+        </div>
+      </div> <!-- fear display  -->
+    </div> <!-- chrono-col23 -->
 
     <div class="tftl-panel--fullheight">
       <div class="tftl-panel__header background-rand-1" data-i18n="Hideout">Hideout</div>
@@ -138,132 +268,6 @@
   </div> <!-- chrono-col2 -->
 
   <div class="chrono-col3">
-    <div class="tftl-panel--full tftl-character-info">
-      <div class="tftl-panel__row--span2 tftl-panel__row--name background-rand-10">
-        <strong class="tftl-panel__label--small tftl-panel__label" data-i18n="Name">Name</strong>
-        <input class="tftl-panel__input--hide" name="attr_character_name" type="text"/>
-      </div>
-      
-      <div class="tftl-panel__row--span2 tftl-panel__row--type background-rand-3">
-        <strong class="tftl-panel__label--small tftl-panel__label" xdata-i18n="Type">Politic</strong>
-        <input class="tftl-panel__input--hide" name="attr_politic" type="text"/>
-        <!-- <select class="tftl-panel__input--hide" name="attr_politic">
-          <option value="Futurist" checked>Futurist</option>
-          <option value="Humanist">Humanist</option>
-        </select> -->
-      </div>
-    </div> <!-- tftl-character -->
-
-    <!-- Spirit attributes -->
-    <div class="tftl-attributes tftl-panel--full tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Spirit</div>
-
-      <div class="tftl-panel__row background-rand-6 dark-bg">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Desire" 
-          type="roll" 
-          value="&amp;{template:tftl} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
-        </button>
-        <input class="tftl-panel__input--small" name="attr_desire" type="number" value="0"/>
-      </div> <!-- desire button -->
-
-      <div class="tftl-panel__row background-rand-6 light-bg">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Empathy" 
-          type="roll" 
-          value="&amp;{template:tftl} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
-        </button>
-        <input class="tftl-panel__input--small" name="attr_empathy" type="number" value="0"/>
-      </div> <!-- empathy button -->
-    </div> <!-- Spirit attributes -->
-
-
-    <!-- chrono-items -->
-    <div class="tftl-panel tftl-panel--full">
-      <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" data-i18n="Items">Items</span>
-        <span class="tftl-panel__right" data-i18n="Bonus">Bonus</span>
-      </div>
-      <div class="tftl-panel__row--iconic background-rand-6"><span class="tftl-panel__label--small" data-i18n="Iconic Item">Iconic Item</span>
-        <input class="tftl-panel__input--hide" name="attr_iconic_item" type="text"/><span class="tftl-panel__label--value">+2</span>
-      </div>
-      <fieldset class="repeating_item">
-        <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_item_name" type="text"/><span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_item_bonus" type="number" value="0"/>
-        </div>
-      </fieldset>
-    </div> <!-- chrono-items -->
-
-    <!-- chrono-relationships -->
-    <div class="tftl-panel--full">
-      <div class="tftl-panel__header background-rand-5" xdata-i18n="Relationships">
-        <span class="tftl-panel__left" xdata-i18n="Items">Relationships</span>
-        <span class="tftl-panel__right" xdata-i18n="Bonus">Connection</span>
-      </div>
-      <fieldset class="repeating_relationships">
-        <div class="tftl-panel__row--relationship background-rand-5">
-          <select class="tftl-panel__label--select" name="attr_relationship_type">
-            <option data-i18n="PC">PC</option>
-            <option data-i18n="NPC">NPC</option>
-          </select>
-          <input class="tftl-panel__input--hide" name="attr_relationship" type="text"/>
-          <input class="tftl-panel__input--item" name="attr_relationship_connection" type="number" value="0"/>
-        </div>
-      </fieldset>
-    </div> <!-- chrono-relationships -->
-
-    <div class="tftl-panel--full">
-      <div class="tftl-panel__header background-rand-9" data-i18n="Notes">Notes</div>
-      <div class="tftl-panel__row--textarea background-rand-6">
-        <textarea class="tftl-panel__textarea--full" name="attr_notes"></textarea>
-      </div>
-    </div>
-    
-  </div> <!-- chrono-col3 -->
-
-  <div class="chrono-col4">
-    <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-2" xdata-i18n="Attributes">Mind</div>
-
-      <div class="tftl-panel__row background-rand-6 dark-bg">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Logic" 
-          type="roll" 
-          value="&amp;{template:tftl} {{action_name=Logic}} {{character_name=@{character_name}}} {{roll=[[[[@{logic}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{logic}}} {{stat_title=Logic}} {{bonus_dice=?{Bonus Dice|0}}} "> Logic
-        </button>
-        <input class="tftl-panel__input--small" name="attr_logic" type="number" value="0"/>
-      </div> <!-- Logic button -->
-      
-      <div class="tftl-panel__row background-rand-6 light-bg">
-        <button 
-          class="tftl-panel__label--button" 
-          xdata-i18n="Vibe" 
-          type="roll" 
-          value="&amp;{template:tftl} {{action_name=Vibe}} {{character_name=@{character_name}}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{vibe}}} {{stat_title=Vibe}} {{bonus_dice=?{Bonus Dice|0}}} "> Vibe
-        </button>
-        <input class="tftl-panel__input--small" name="attr_vibe" type="number" value="0"/>
-      </div> <!-- Vibe button -->
-    </div> <!-- Mind Attributes -->
-
-    <div class="tftl-attributes tftl-panel--alternate">
-      <div class="tftl-panel__header background-rand-2" xdata-i18n="Hitpoints">Energy </div>
-
-      <div class="tftl-panel__row background-rand-9">
-        <img class="lightning-symbol" src="https://i.imgur.com/gpv6fx1.png"/>
-        <input class="tftl-panel__input--small" name="attr_energy" xplaceholder="25" title="@{attr_energy}" type="number">
-        <span class="minmax-display-divide">/  </span>
-        <input class="tftl-panel__input--small" name="attr_energy_max" xplaceholder="25" title="@{attr_energy_max}" type="number">
-      </div>
-
-    </div> <!-- sheet-hitpoint-display -->
-
-  </div> <!-- chrono-col4 -->
-
-  <div class="chrono-col5">
     <!-- Skill(MIND) -->
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
@@ -272,9 +276,9 @@
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <input class="tftl-panel__input--hide" name="attr_mind_skill_name" type="text"/>
           <span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+          <input class="tftl-panel__input--item" name="attr_mind_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
     </div> <!-- Skill(MIND) -->
@@ -282,14 +286,14 @@
     <!-- Skill(LOG) -->
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(LOG)</span>
+        <span class="tftl-panel__left" xdata-i18n="Skills">Logic</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <input class="tftl-panel__input--hide" name="attr_logic_skill_name" type="text"/>
           <span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+          <input class="tftl-panel__input--item" name="attr_logic_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
     </div> <!-- Skill(LOG) -->
@@ -297,18 +301,20 @@
     <!-- Skill(VIB) -->
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(VIB)</span>
+        <span class="tftl-panel__left" xdata-i18n="Skills">Vibe</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
         <div class="tftl-panel__row--item background-rand-3">
-          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <input class="tftl-panel__input--hide" name="attr_vibe_skill_name" type="text"/>
           <span class="tftl-panel__label--plus">+</span>
-          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+          <input class="tftl-panel__input--item" name="attr_vibe_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
     </div> <!-- Skill(VIB) -->
-  </div> <!-- chrono-col5 -->
+
+  </div> <!-- chrono-col3 -->
+  
 </div> <!-- chrono-wrapper -->
 
 <rolltemplate class="sheet-rolltemplate-tftl">
