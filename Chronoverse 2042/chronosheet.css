@@ -187,7 +187,7 @@
   background-color: #f95867; /*darker hue*/
 }
 .charsheet .sheet-mid-bg {
-  background-color: #b7bf3c; /*darker hue*/
+  background-color: #dee662; /*middle hue*/
 }
 .charsheet .sheet-dark-txt span {
   color: #000;
@@ -308,7 +308,7 @@
   height: 100%;
   width: 100%;
 }
-.charsheet .sheet-tftl-panel__input--hide .sheet-centered-text{
+.charsheet .sheet-centered-text{
   text-align: center;
 }
 .charsheet .sheet-tftl-panel__input--hide[type=text]:hover, .charsheet .sheet-tftl-panel__input--hide[type=number]:hover {
