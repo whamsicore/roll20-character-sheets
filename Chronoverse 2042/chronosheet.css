@@ -275,7 +275,7 @@
 .charsheet .sheet-tftl-panel__input, .charsheet .sheet-tftl-panel__textarea--full, .charsheet .sheet-tftl-panel__input--hide[type=text], .charsheet .sheet-tftl-panel__input--hide[type=number], .charsheet .sheet-tftl-panel__input--small[type=text], .charsheet [type=text].sheet-tftl-panel__input--item, .charsheet .sheet-tftl-panel__input--small[type=number], .charsheet [type=number].sheet-tftl-panel__input--item {
   flex-shrink: 1;
   border-radius: 0;
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: bold;
   font-family: sans-serif;
 }

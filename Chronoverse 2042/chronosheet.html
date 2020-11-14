@@ -9,12 +9,13 @@
 <input name="attr_sheet_version" type="hidden"/>
 
 <div class="chrono-wrapper">
-  <div class="tftl-logo"><img src="https://i.imgur.com/sYac9vD.png"/></div>
+  <img class="tftl-logo" src="https://i.imgur.com/sYac9vD.png"/>
   <div class="chrono-col1">
-
+    
+    <!-- Skill(BODY) -->
     <div class="tftl-panel">
       <div class="tftl-panel__header background-rand-9">
-        <span class="tftl-panel__left" xdata-i18n="Skills">Skills</span>
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(Body)</span>
         <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
       </div>
       <fieldset class="repeating_skill">
@@ -24,7 +25,37 @@
           <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
         </div>
       </fieldset>
-    </div>
+    </div> <!-- Skill(Body) -->
+
+    <!-- Skill(CTR) -->
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(CTR)</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
+      </div>
+      <fieldset class="repeating_skill">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- Skill(CTR) -->
+
+    <!-- Skill(FLO) -->
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(FLO)</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
+      </div>
+      <fieldset class="repeating_skill">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- Skill(FLO) -->
   </div> <!-- chrono-col1 -->
   
   <div class="chrono-col2">
@@ -57,11 +88,6 @@
 
       <div class="tftl-panel__row background-rand-6">
         <img class="heart-symbol" src="https://i.imgur.com/yxSrvMU.png"/>
-
-        <strong 
-          xdata-i18n="hitpoints"
-          class="tftl-panel__label--button">HP
-        </strong>
         <input class="tftl-panel__input--small" name="attr_hitpoint" xplaceholder="25" title="@{attr_hitpoint}" type="number">
         <span class="minmax-display-divide"> / </span>
         <input class="tftl-panel__input--small" name="attr_hitpoint_max" xplaceholder="25" title="@{attr_hitpoint_max}" type="number">
@@ -228,11 +254,6 @@
 
       <div class="tftl-panel__row background-rand-9">
         <img class="lightning-symbol" src="https://i.imgur.com/gpv6fx1.png"/>
-
-        <strong 
-          xdata-i18n="energy"
-          class="tftl-panel__label--button">E
-        </strong>
         <input class="tftl-panel__input--small" name="attr_energy" xplaceholder="25" title="@{attr_energy}" type="number">
         <span class="minmax-display-divide">/  </span>
         <input class="tftl-panel__input--small" name="attr_energy_max" xplaceholder="25" title="@{attr_energy_max}" type="number">
@@ -243,7 +264,50 @@
   </div> <!-- chrono-col4 -->
 
   <div class="chrono-col5">
-    
+    <!-- Skill(MIND) -->
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(MIND)</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
+      </div>
+      <fieldset class="repeating_skill">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- Skill(MIND) -->
+
+    <!-- Skill(LOG) -->
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(LOG)</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
+      </div>
+      <fieldset class="repeating_skill">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- Skill(LOG) -->
+
+    <!-- Skill(VIB) -->
+    <div class="tftl-panel">
+      <div class="tftl-panel__header background-rand-9">
+        <span class="tftl-panel__left" xdata-i18n="Skills">Skill(VIB)</span>
+        <span class="tftl-panel__right" xdata-i18n="Bonus">Level</span>
+      </div>
+      <fieldset class="repeating_skill">
+        <div class="tftl-panel__row--item background-rand-3">
+          <input class="tftl-panel__input--hide" name="attr_skill_name" type="text"/>
+          <span class="tftl-panel__label--plus">+</span>
+          <input class="tftl-panel__input--item" name="attr_skill_type" type="number" value="0"/>
+        </div>
+      </fieldset>
+    </div> <!-- Skill(VIB) -->
   </div> <!-- chrono-col5 -->
 </div> <!-- chrono-wrapper -->
 
