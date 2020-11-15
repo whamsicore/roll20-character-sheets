@@ -4,7 +4,26 @@
   value="&amp;{template:chrono} {{name=Push}} {{character_name=@{character_name}}} {{desire=@{desire}}} {{empathy=@{empathy}}} {{roll=[[[[@{desire}]]d6&gt;6]]}} !modattr --silent --charid @{character_id} --energy|[[-1-]]!!! {{energy=[[@{energy}-1]]}} {{energyMax=@{energy|max}}}">
 </button>
 
-<input data-i18n-value="Reroll" name="attr_spirit_button" type="hidden" value="Spirit Push"/>
+<button 
+  name="roll_desire_push" 
+  type="roll" 
+  value="&amp;{template:chrono} {{action_name=Desire Push}} {{character_name=@{character_name}}} {{stat_title=Desire}} {{stat_value=@{desire}}} {{skill_title=Fear}} {{skill_value=@{fear}}} {{total_dice=[[@{desire}+@{fear}]]}} {{roll=[[[[@{desire}+@{fear}]]d6&gt;6]]}} !modattr --silent --charid @{character_id} --energy|[[-1-@{fear}]]!!! {{energy=[[@{energy}-1-@{fear}]]}} {{energyMax=@{energy|max}}}">
+</button>
+
+
+<!-- TODO: 
+  - Add fear as bonus to desire_push. 
+  - Substract additional energy.
+  - Add condition for showing desire_push option
+  push costs X amt of energy, depending on FEAR and PAIN and the type of push.  -->
+<button 
+  name="roll_empathy_push" 
+  type="roll" 
+  value="&amp;{template:chrono} {{name=Empathy Push}} {{character_name=@{character_name}}} {{empathy=@{empathy}}} {{roll=[[[[@{empathy}+@{fear}]]d6&gt;6]]}} !modattr --silent --charid @{character_id} --energy|[[-1-@{fear}]]!!! {{energy=[[@{energy}-1]]}} {{energyMax=@{energy|max}}}">
+</button>
+
+<input data-i18n-value="Reroll" name="attr_desire_push_button" type="hidden" value="Desire Push"/>
+<input data-i18n-value="Reroll" name="attr_empathy_push_button" type="hidden" value="Empathy Push"/>
 
 <input name="attr_sheet_version" type="hidden"/>
 
@@ -45,7 +64,7 @@
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title} Skill}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --turn_tracker|[[+1]]!!! {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}}">
+            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title} Skill}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|desire_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{push_energy_cost=[[@{fear}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --turn_tracker|[[+1]]!!! {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}}">
           </button>
           <input class="chrono-panel__input--skill" name="attr_ctr-skill-value" type="number" value="0" placeholder="0" />
         </div>
@@ -341,13 +360,12 @@
       {{/stat_value}}
       
       {{#skill_value}}
-        <div class="sheet-chrono-roll-row"><span>+</span><span>{{skill_title}} Skill</span><span>({{skill_value}})</span></div>
+        <div class="sheet-chrono-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>
       {{/skill_value}}
 
       {{#bonus_dice}}
         <div class="sheet-chrono-roll-row">
-          <span>+</span><span data-i18n="Bonus">Bonus</span>
-          <span>({{bonus_dice}}) </span>
+          <span>+</span><span data-i18n="Bonus">Bonus</span><span>({{bonus_dice}}) </span>
         </div>
       {{/bonus_dice}}
 
@@ -358,15 +376,18 @@
       
     </div>
     <div class="sheet-chrono-roll">
-      <span>{{roll}}</span> <span>Successes</span>
+      <span>{{roll}}/{{total_dice}}</span> <span>Successes</span>
     </div>
 
     <div class="sheet-chrono-buttons">
-      {{spirit_button}}
-      <div class="sheet-chrono-buttontext" 
-        xdata-i18n="Push with your Spirit!">
-        Push with your Spirit!
-      </div>
+      {{#desire_push_button}}
+        {{desire_push_button}}
+        <div class="sheet-chrono-buttontext" 
+          xdata-i18n="">
+          Use {{push_energy_cost}} energy to push your roll~
+        </div>
+      {{/desire_push_button}}
+
     </div>
 
     <div class="sheet-chrono-footer"></div>
