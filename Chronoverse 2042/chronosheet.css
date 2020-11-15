@@ -279,7 +279,7 @@
 }
 .charsheet .sheet-chrono-panel__row--skill {
   display: grid;
-  grid-template-columns: 1fr 2em 2.5em;
+  grid-template-columns: 1fr 2.5em 2.5em;
   padding: 0;
   border-bottom: 1px solid #000;
 }

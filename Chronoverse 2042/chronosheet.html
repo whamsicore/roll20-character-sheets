@@ -36,18 +36,18 @@
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 dark-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Control</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL / Roll</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL</span>
       </div>
       <fieldset class="repeating_ctrl-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
           <input class="chrono-panel__input--hide" name="attr_ctr-skill-title" type="text" placeholder="CTR Skill"/>
-          <input class="chrono-panel__input--skill" name="attr_ctr-skill-value" type="number" value="0" placeholder="0" />
           <button 
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title} Skill}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --turn-tracker|[[+1]]!!! {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}}">
+            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title} Skill}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --turn_tracker|[[+1]]!!! {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}}">
           </button>
+          <input class="chrono-panel__input--skill" name="attr_ctr-skill-value" type="number" value="0" placeholder="0" />
         </div>
       </fieldset>
     </div> <!-- Skill(CTR) -->
