@@ -8,17 +8,21 @@
 <button 
   name="roll_desire_push" 
   type="roll" 
-  value="&amp;{template:chrono} {{action_name=Desire Push}} {{character_name=@{character_name}}} {{stat_title=Desire}} {{stat_value=@{desire}}} {{skill_title=Fear}} {{skill_value=@{fear}}} {{total_dice=[[@{desire}+@{fear}]]}} {{roll=[[[[@{desire}+@{fear}]]d6&gt;6]]}}  {{energy=[[@{energy}-1-@{fear}]]}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --energy|[[-1-@{fear}]]!!!">
+  class="desire-bg"
+  value="&amp;{template:chrono} {{action_name=Desire Push}} {{character_name=@{character_name}}} {{stat_title=Desire}} {{stat_value=@{desire}}} {{skill_title=Fear}} {{skill_value=@{fear}}} {{total_dice=[[@{desire}+@{fear}]]}} {{roll=[[[[@{desire}+@{fear}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_again_button}](~@{character_id}|desire_push)}} {{push_energy_cost=[[@{fear}+1]]}} {{energy=[[@{energy}-1-@{fear}]]}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --energy|[[-1-@{fear}]]!!!">
 </button>
 
 <button 
   name="roll_empathy_push" 
   type="roll"
-  value="&amp;{template:chrono} {{action_name=Empathy Push}} {{character_name=@{character_name}}} {{stat_title=Empathy}} {{stat_value=@{empathy}}} {{skill_title=Pain}} {{skill_value=@{pain}}} {{total_dice=[[@{empathy}+@{pain}]]}} {{roll=[[[[@{empathy}+@{pain}]]d6&gt;6]]}} {{energy=[[@{energy}-1-@{pain}]]}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --energy|[[-1-@{pain}]]!!!">
+  class="empathy-bg"
+  value="&amp;{template:chrono} {{action_name=Empathy Push}} {{character_name=@{character_name}}} {{stat_title=Empathy}} {{stat_value=@{empathy}}} {{skill_title=Pain}} {{skill_value=@{pain}}} {{total_dice=[[@{empathy}+@{pain}]]}} {{roll=[[[[@{empathy}+@{pain}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_again_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{energy=[[@{energy}-1-@{pain}]]}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --energy|[[-1-@{pain}]]!!!">
 </button>
 
 <input xdata-i18n-value="Reroll" name="attr_desire_push_button" type="hidden" value="Desire Push"/>
 <input xdata-i18n-value="Reroll" name="attr_empathy_push_button" type="hidden" value="Empathy Push"/>
+<input name="attr_desire_push_again_button" type="hidden" value="Push again!"/>
+<input name="attr_empathy_push_again_button" type="hidden" value="Push again!"/>
 
 <input name="attr_sheet_version" type="hidden"/>
 
@@ -49,7 +53,7 @@
 
     <!-- Skill(CTR) -->
     <div class="chrono-panel">
-      <div class="chrono-panel__header rand-bg-9 dark-bg dark-txt">
+      <div class="chrono-panel__header rand-bg-9 desire-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Control</span>
         <span class="chrono-panel__right" xdata-i18n="Bonus">LvL</span>
       </div>
@@ -60,7 +64,7 @@
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|desire_push)}} {{push_energy_cost=[[@{fear}+1]]}} {{stat_value=@{control}}} {{stat_title=Control}} {{push_energy_cost=[[@{fear}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}} !modattr --charid @{character_id} --turnTracker|[[+1]]!!!">
+            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|desire_push)}} {{push_energy_cost=[[@{fear}+1]]}} {{stat_value=@{control}}} {{stat_title=Control}} {{push_energy_cost=[[@{fear}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}} !modattr --silent --charid @{character_id} --turnTracker|[[+1]]!!!">
           </button>
           <input class="chrono-panel__input--skill" name="attr_ctr-skill-value" type="number" value="0" placeholder="0" />
         </div>
@@ -69,9 +73,9 @@
 
     <!-- Skill(FLO) -->
     <div class="chrono-panel">
-      <div class="chrono-panel__header rand-bg-9 light-bg dark-txt">
+      <div class="chrono-panel__header rand-bg-9 empathy-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Flow</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">Level</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL</span>
       </div>
       <fieldset class="repeating_flo-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
@@ -80,7 +84,7 @@
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{flo-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+?{Bonus Dice|0}+@{flo-skill-value}]]}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{flo-skill-value}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{control}}} {{stat_title=Control}} {{push_energy_cost=[[@{pain}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --turnTracker|[[+1]]!!! {{skill_value=@{flo-skill-value}}} {{skill_title=@{flo-skill-title}}}">
+            value="&amp;{template:chrono} {{action_name=@{flo-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+?{Bonus Dice|0}+@{flo-skill-value}]]}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{flo-skill-value}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{control}}} {{stat_title=Control}} {{push_energy_cost=[[@{pain}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --turnTracker|[[+1]]!!! {{skill_value=@{flo-skill-value}}} {{skill_title=@{flo-skill-title}}}">
           </button>
           <input class="chrono-panel__input--skill" name="attr_flo-skill-value" type="number" value="0" placeholder="0" />
         </div>
@@ -117,7 +121,7 @@
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Body</div>
 
-        <div class="chrono-panel__row chrono-attr-row rand-bg-6 dark-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 desire-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Control" 
@@ -127,12 +131,12 @@
           <input class="chrono-panel__input--small" name="attr_control" type="number" value="0"/>
         </div> <!-- control button -->
 
-        <div class="chrono-panel__row chrono-attr-row rand-bg-6 light-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 empathy-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Flow" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=Flow}} {{character_name=@{character_name}}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} "> Flow
+            value="&amp;{template:chrono} {{action_name=Flow}} {{character_name=@{character_name}}} {{total_dice=[[@{flow}+?{Bonus Dice|0}]]}} {{roll=[[[[@{flow}+?{Bonus Dice|0}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{flow}}} {{stat_title=flow}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Flow
           </button>
           <input class="chrono-panel__input--small" name="attr_flow" type="number" value="0"/>
         </div> <!-- flow button -->
@@ -152,7 +156,7 @@
       <!-- pain display  -->
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Suffering">Pain</div>
-        <div class="chrono-panel__row rand-bg-1 light-bg dark-txt"> 
+        <div class="chrono-panel__row rand-bg-1 empathy-bg dark-txt"> 
           <input class="chrono-panel__input--small" name="attr_pain" xplaceholder="25" title="@{attr_pain}" type="number" placeholder="0">
           <span class="minmax-display-divide"> / </span>
           <input type="number" name="attr_pain_tolerance" disabled="true" value="@{desire}" />
@@ -173,22 +177,22 @@
       <div class="chrono-panel--full chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Spirit</div>
 
-        <div class="chrono-panel__row chrono-attr-row rand-bg-6 dark-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 desire-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Desire" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> Desire
+            value="&amp;{template:chrono} {{action_name=Desire}} {{character_name=@{character_name}}} {{roll=[[[[@{desire}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{desire}}} {{stat_title=desire}} {{bonus_dice=?{Bonus Dice|0}}} "> DES
           </button>
           <input class="chrono-panel__input--small" name="attr_desire" type="number" value="0"/>
         </div> <!-- desire button -->
 
-        <div class="chrono-panel__row chrono-attr-row rand-bg-6 light-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 empathy-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Empathy" 
             type="roll" 
-            value="&amp;{template:chrono} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> Empathy
+            value="&amp;{template:chrono} {{name=empathy}} {{character_name=@{character_name}}} {{roll=[[[[@{empathy}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{empathy}}} {{stat_title=empathy}} {{bonus_dice=?{Bonus Dice|0}}} "> EMP
           </button>
           <input class="chrono-panel__input--small" name="attr_empathy" type="number" value="0"/>
         </div> <!-- empathy button -->
@@ -200,22 +204,22 @@
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Mind</div>
 
-        <div class="chrono-panel__row chrono-attr-row rand-bg-6 dark-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 desire-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Logic" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=Logic}} {{character_name=@{character_name}}} {{roll=[[[[@{logic}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{logic}}} {{stat_title=Logic}} {{bonus_dice=?{Bonus Dice|0}}} "> Logic
+            value="&amp;{template:chrono} {{action_name=Logic}} {{character_name=@{character_name}}} {{total_dice=[[@{logic}+?{Bonus Dice|0}]]}} {{roll=[[[[@{logic}+?{Bonus Dice|0}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|desire_push)}} {{push_energy_cost=[[@{fear}+1]]}} {{stat_value=@{logic}}} {{stat_title=logic}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Logic
           </button>
           <input class="chrono-panel__input--small" name="attr_logic" type="number" value="0"/>
         </div> <!-- Logic button -->
         
-        <div class="chrono-panel__row chrono-attr-row rand-bg-6 light-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 empathy-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Vibe" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=Vibe}} {{character_name=@{character_name}}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=@{vibe}}} {{stat_title=Vibe}} {{bonus_dice=?{Bonus Dice|0}}} "> Vibe
+            value="&amp;{template:chrono} {{action_name=Vibe}} {{character_name=@{character_name}}} {{total_dice=[[@{vibe}+?{Bonus Dice|0}]]}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{vibe}}} {{stat_title=vibe}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Vibe
           </button>
           <input class="chrono-panel__input--small" name="attr_vibe" type="number" value="0"/>
         </div> <!-- Vibe button -->
@@ -235,7 +239,7 @@
       <!-- fear display -->
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-9" xdata-i18n="Suffering">Fear</div>
-        <div class="chrono-panel__row rand-bg-1 dark-bg dark-txt"> 
+        <div class="chrono-panel__row rand-bg-1 desire-bg dark-txt"> 
           <input class="chrono-panel__input--small" name="attr_fear" xplaceholder="25" title="@{attr_fear}" type="number" placeholder="0">
           <span class="minmax-display-divide"> / </span>
           <input type="number" name="attr_fear_tolerance" disabled="true" value="@{empathy}"/>
@@ -299,9 +303,9 @@
 
     <!-- Skill(LOG) -->
     <div class="chrono-panel">
-      <div class="chrono-panel__header rand-bg-9 dark-bg dark-txt">
+      <div class="chrono-panel__header rand-bg-9 desire-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Logic</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">Level</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL</span>
       </div>
       <fieldset class="repeating_log-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
@@ -310,7 +314,7 @@
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{log-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{logic}+?{Bonus Dice|0}+@{log-skill-value}]]}} {{roll=[[[[@{logic}+?{Bonus Dice|0}+@{log-skill-value}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|desire_push)}} {{push_energy_cost=[[@{fear}+1]]}} {{stat_value=@{logic}}} {{stat_title=logic}} {{push_energy_cost=[[@{fear}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} {{skill_value=@{log-skill-value}}} {{skill_title=@{log-skill-title}}} !modattr --charid @{character_id} --turnTracker|[[+1]]!!!">
+            value="&amp;{template:chrono} {{action_name=@{log-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{logic}+?{Bonus Dice|0}+@{log-skill-value}]]}} {{roll=[[[[@{logic}+?{Bonus Dice|0}+@{log-skill-value}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|desire_push)}} {{push_energy_cost=[[@{fear}+1]]}} {{stat_value=@{logic}}} {{stat_title=logic}} {{push_energy_cost=[[@{fear}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} {{skill_value=@{log-skill-value}}} {{skill_title=@{log-skill-title}}} !modattr --silent --charid @{character_id} --turnTracker|[[+1]]!!!">
           </button>
           <input class="chrono-panel__input--skill" name="attr_log-skill-value" type="number" value="0" placeholder="0" />
         </div>
@@ -319,9 +323,9 @@
 
     <!-- Skill(VIB) -->
     <div class="chrono-panel">
-      <div class="chrono-panel__header rand-bg-9 light-bg dark-txt">
+      <div class="chrono-panel__header rand-bg-9 empathy-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Vibe</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">Level</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL</span>
       </div>
       <fieldset class="repeating_vib-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
@@ -330,7 +334,7 @@
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{vib-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{vibe}+?{Bonus Dice|0}+@{vib-skill-value}]]}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}+@{vib-skill-value}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{vibe}}} {{stat_title=Control}} {{push_energy_cost=[[@{pain}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --charid @{character_id} --turnTracker|[[+1]]!!! {{skill_value=@{vib-skill-value}}} {{skill_title=@{vib-skill-title}}}">
+            value="&amp;{template:chrono} {{action_name=@{vib-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{vibe}+?{Bonus Dice|0}+@{vib-skill-value}]]}} {{roll=[[[[@{vibe}+?{Bonus Dice|0}+@{vib-skill-value}]]d6&gt;6]]}} {{empathy_push_button=[@{empathy_push_button}](~@{character_id}|empathy_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{vibe}}} {{stat_title=Control}} {{push_energy_cost=[[@{pain}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --turnTracker|[[+1]]!!! {{skill_value=@{vib-skill-value}}} {{skill_title=@{vib-skill-title}}}">
           </button>
           <input class="chrono-panel__input--skill" name="attr_vib-skill-value" type="number" value="0" placeholder="0" />
         </div>
@@ -358,7 +362,14 @@
 </div> <!-- chrono-wrapper -->
 
 <rolltemplate class="sheet-rolltemplate-chrono">
-  <div class="sheet-chrono-container">
+  {{#desire_push_button}}
+  <div class="sheet-chrono-container sheet-desire-theme">
+  {{/desire_push_button}}
+
+  {{#empathy_push_button}}
+  <div class="sheet-chrono-container sheet-empathy-theme">
+  {{/empathy_push_button}}
+
     {{#action_name}}
       <h1>{{action_name}}</h1>
     {{/action_name}}
@@ -370,13 +381,13 @@
     <div class="sheet-chrono-body">
       {{#stat_value}}
         <div class="sheet-chrono-roll-row">
-          <span>{{stat_title}}</span><span>(+{{stat_value}})</span>
+          <span>{{stat_title}}</span><span>({{stat_value}})</span>
         </div>
       {{/stat_value}}
       
       {{#skill_value}}
         <div class="sheet-chrono-roll-row">
-          <span>{{skill_title}}</span><span>(+{{skill_value}})</span></div>
+          <span>{{skill_title}}</span><span>({{skill_value}})</span></div>
       {{/skill_value}}
 
       {{#bonus_dice}}
@@ -392,7 +403,9 @@
 
     <div class="sheet-chrono-buttons">
       {{#desire_push_button}}
+        <div class="desire-bg">
         {{desire_push_button}}
+        </div>
         <div class="sheet-chrono-buttontext">Use {{push_energy_cost}} energy to push </div>
       {{/desire_push_button}}
 
