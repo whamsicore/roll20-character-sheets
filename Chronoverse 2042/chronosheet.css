@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:800|Montserrat:700|Baltimore%20Typewriter:400|&display=swap");
+
+.charsheet button[type=roll].sheet-blank-roll-button::before {
+ content: ''; 
+}
+
 .sheet-hidden {
   display: none;
 }
@@ -20,7 +25,7 @@
 }
 .charsheet .sheet-chrono-wrapper input[type=number] {
   text-align: center;
-  width: 2.5em;
+  width: 2em;
   -moz-appearance: textfield;
 }
 .charsheet .sheet-chrono-wrapper input[type=number] .chrono-panel__input--skill { /*custom*/
@@ -44,8 +49,6 @@
   /*grid-template-columns: 1.15fr 0.85fr;*/
   gap: 1em;
 }
-
-
 .charsheet .sheet-chrono-col2 .sheet-chrono-col21{
   display: grid;
   gap: 1em;
@@ -72,6 +75,20 @@
   gap: 1em;
 }
 
+.charsheet .sheet-chrono-panel.sheet-turn-tracker span {
+
+}
+
+.charsheet .sheet-chrono-roll-button {
+  width: 1.5em; 
+  height: 1.5em;
+  background: #fff;
+  background-image: url("https://i.imgur.com/Od6fTLz.png");
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-size: cover;
+  border:none;
+}
 
 .charsheet .sheet-chrono-panel, 
 .charsheet .sheet-chrono-panel--fullheight, .charsheet .sheet-chrono-panel--full, .charsheet .sheet-chrono-panel--alternate {
@@ -209,7 +226,7 @@
   display: flex;
   align-items: center;
   min-height: 3em;
-  padding: 0.35em;
+  /*padding: 0.35em;*/
   background-color: #fff; /*notes area*/
 }
 .charsheet .sheet-chrono-wrapper input[type=number] .chrono-panel__input--skill { /*custom*/
@@ -262,9 +279,8 @@
 }
 .charsheet .sheet-chrono-panel__row--skill {
   display: grid;
-  grid-template-columns: 1fr 2em 2em;
+  grid-template-columns: 1fr 2em 2.5em;
   padding: 0;
-  padding-left: 0.35em;
   border-bottom: 1px solid #000;
 }
 .charsheet .sheet-chrono-panel__row--relationship {
@@ -383,7 +399,7 @@
 }
 
 .charsheet .sheet-chrono-panel__input--hide[type=text]:hover, .charsheet .sheet-chrono-panel__input--hide[type=number]:hover {
-  background-color: rgba(177, 125, 29, 0.2);
+  background-color: rgba(100, 100, 100, 0.2);
 }
 
 .charsheet .sheet-chrono-panel__input--item, 
@@ -600,13 +616,25 @@ input[type="radio"]:checked ~ input[type="radio"] + span::before {
 
 .charsheet .sheet-chrono-logo {
   grid-column: 1/-1;
-}
-.charsheet .sheet-chrono-logo img {
-  margin: auto;
+  background-image: url("https://i.imgur.com/dHQ6x3o.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border:none;
+  background-color: #000;   
+  width:100%;
+  height: 260px;
+  position: relative;
 }
 
-.charsheet .sheet-chrono-logo {
-  background-color: #000;   
-  /*height: 250px;*/
-  width:100%;
+.charsheet .sheet-chrono-panel.sheet-turn-tracker { /*custom*/
+  width: 4em; 
+  height: 2em;
+  background-color: #fff;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.sheet-chrono-meditation-man {
+  background: #fff; 
 }
