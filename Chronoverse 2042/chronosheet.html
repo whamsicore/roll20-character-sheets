@@ -120,7 +120,7 @@
             class="chrono-panel__label--button" 
             xdata-i18n="Control" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
+            value="&amp;{template:chrono} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}]]d6&gt;6]]}} {{desire_push_button=[@{desire_push_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Control
           </button>
           <input class="chrono-panel__input--small" name="attr_control" type="number" value="0"/>
         </div> <!-- control button -->
@@ -356,16 +356,18 @@
     <div class="sheet-chrono-body">
       {{#stat_value}}
         <div class="sheet-chrono-roll-row">
-          <span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>
+          <span>{{stat_title}}</span><span>(+{{stat_value}})</span>
+        </div>
       {{/stat_value}}
       
       {{#skill_value}}
-        <div class="sheet-chrono-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>
+        <div class="sheet-chrono-roll-row">
+          <span>{{skill_title}}</span><span>(+{{skill_value}})</span></div>
       {{/skill_value}}
 
       {{#bonus_dice}}
         <div class="sheet-chrono-roll-row">
-          <span>+</span><span data-i18n="Bonus">Bonus</span><span>({{bonus_dice}}) </span>
+          <span data-i18n="Bonus">Bonus</span><span>(+{{bonus_dice}}) </span>
         </div>
       {{/bonus_dice}}
 
@@ -384,7 +386,7 @@
         {{desire_push_button}}
         <div class="sheet-chrono-buttontext" 
           xdata-i18n="">
-          Use {{push_energy_cost}} energy to push your roll~
+          Use {{push_energy_cost}} energy to push
         </div>
       {{/desire_push_button}}
 
