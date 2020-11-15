@@ -10,6 +10,7 @@
 
 <div class="chrono-wrapper">
   <div class="chrono-logo">
+    <img src="https://i.imgur.com/dHQ6x3o.png" />
     <div class="chrono-panel turn-tracker"> 
       <span name="attr_turn_tracker" value="0"></span>
     </div>
@@ -35,7 +36,7 @@
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 dark-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Control</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL  Roll</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL / Dice</span>
       </div>
       <fieldset class="repeating_ctrl-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
@@ -101,7 +102,7 @@
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Body</div>
 
-        <div class="chrono-panel__row rand-bg-6 dark-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 dark-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Control" 
@@ -111,7 +112,7 @@
           <input class="chrono-panel__input--small" name="attr_control" type="number" value="0"/>
         </div> <!-- control button -->
 
-        <div class="chrono-panel__row rand-bg-6 light-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 light-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Flow" 
@@ -125,7 +126,7 @@
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Hitpoints">Hitpoint</div>
 
-        <div class="chrono-panel__row rand-bg-6">
+        <div class="chrono-panel__row chrono-resource-row rand-bg-6">
           <img class="heart-symbol" src="https://i.imgur.com/yxSrvMU.png"/>
           <input class="chrono-panel__input--small" name="attr_hitpoint" xplaceholder="25" title="@{attr_hitpoint}" type="number">
           <span class="minmax-display-divide"> / </span>
@@ -157,7 +158,7 @@
       <div class="chrono-panel--full chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Spirit</div>
 
-        <div class="chrono-panel__row rand-bg-6 dark-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 dark-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Desire" 
@@ -167,7 +168,7 @@
           <input class="chrono-panel__input--small" name="attr_desire" type="number" value="0"/>
         </div> <!-- desire button -->
 
-        <div class="chrono-panel__row rand-bg-6 light-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 light-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Empathy" 
@@ -184,7 +185,7 @@
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Mind</div>
 
-        <div class="chrono-panel__row rand-bg-6 dark-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 dark-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Logic" 
@@ -194,7 +195,7 @@
           <input class="chrono-panel__input--small" name="attr_logic" type="number" value="0"/>
         </div> <!-- Logic button -->
         
-        <div class="chrono-panel__row rand-bg-6 light-bg dark-txt">
+        <div class="chrono-panel__row chrono-attr-row rand-bg-6 light-bg dark-txt">
           <button 
             class="chrono-panel__label--button" 
             xdata-i18n="Vibe" 
@@ -208,7 +209,7 @@
       <div class="chrono-panel--alternate">
         <div class="chrono-panel__header rand-bg-2" xdata-i18n="Hitpoints">Energy </div>
 
-        <div class="chrono-panel__row rand-bg-9">
+        <div class="chrono-panel__row chrono-resource-row rand-bg-9">
           <img class="lightning-symbol" src="https://i.imgur.com/gpv6fx1.png"/>
           <input class="chrono-panel__input--small" name="attr_energy" xplaceholder="25" title="@{attr_energy}" type="number">
           <span class="minmax-display-divide">/  </span>
