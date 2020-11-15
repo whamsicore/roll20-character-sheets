@@ -234,7 +234,6 @@
   height:2em;
   font-size: 8px;
 }
-
 .sheet-rolltemplate-chrono .sheet-desire-theme h2 {
   color: #f95867;
   border-color: #f95867;
@@ -646,15 +645,17 @@ input[type="radio"]:checked ~ input[type="radio"] + span::before {
   bottom: 5px;
   left: 5px;
 }
-
 .sheet-chrono-attr-row {
   padding: 0px 5px;
 }
-
 .sheet-chrono-resource-row {
   padding-left: 15px;
-
 }
 .sheet-chrono-meditation-man {
   background: #fff; 
+}
+
+.sheet-chrono-panel-light-bg {
+  background: #999;
+  color: black;
 }
