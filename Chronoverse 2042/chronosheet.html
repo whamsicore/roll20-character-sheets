@@ -36,23 +36,17 @@
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 dark-bg dark-txt">
         <span class="chrono-panel__left" xdata-i18n="Skills">Control</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL / Dice</span>
+        <span class="chrono-panel__right" xdata-i18n="Bonus">LvL / Roll</span>
       </div>
       <fieldset class="repeating_ctrl-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_ctr-skill-name" type="text" placeholder="CTR Skill"/>
-          <input class="chrono-panel__input--skill" name="attr_ctr-skill-level" type="number" value="0" placeholder="0" />
-          <!-- <button 
-            xclass="chrono-panel__label--button" 
-            class="chrono-roll-button blank-roll-button" 
-            type="roll" 
-            value="&amp;{template:chrono} {{action_name=Control}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}+?{@{ctr-skill-level}|0}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=@{ctr-skill-name}}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}">
-          </button> -->
+          <input class="chrono-panel__input--hide" name="attr_ctr-skill-title" type="text" placeholder="CTR Skill"/>
+          <input class="chrono-panel__input--skill" name="attr_ctr-skill-value" type="number" value="0" placeholder="0" />
           <button 
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
-            value="&amp;{template:chrono} {{action_name=@{ctr-skill-name}}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-level}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --turn-tracker|[[+1]]!!!">
+            value="&amp;{template:chrono} {{action_name=@{ctr-skill-title} Skill}} {{character_name=@{character_name}}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{ctr-skill-value}]]d6&gt;6]]}} {{spirit_button=[@{spirit_button}](~@{character_id}|reroll_push)}} {{stat_value=@{control}}} {{stat_title=Control}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --turn-tracker|[[+1]]!!! {{skill_value=@{ctr-skill-value}}} {{skill_title=@{ctr-skill-title}}}">
           </button>
         </div>
       </fieldset>
@@ -66,8 +60,8 @@
       </div>
       <fieldset class="repeating_flo-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_flo-skill-name" type="text" placeholder="FLO Skill"/>
-          <input class="chrono-panel__input--skill" name="attr_flo-skill-name" type="number" value="0" placeholder="0" />
+          <input class="chrono-panel__input--hide" name="attr_flo-skill-title" type="text" placeholder="FLO Skill"/>
+          <input class="chrono-panel__input--skill" name="attr_flo-skill-title" type="number" value="0" placeholder="0" />
         </div>
       </fieldset>
     </div> <!-- Skill(FLO) -->
@@ -290,8 +284,8 @@
       </div>
       <fieldset class="repeating_log-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_log-skill-name" type="text" placeholder="LOG Skill"/>
-          <input class="chrono-panel__input--skill" name="attr_log-skill-name" type="number" value="0" placeholder="0" />
+          <input class="chrono-panel__input--hide" name="attr_log-skill-title" type="text" placeholder="LOG Skill"/>
+          <input class="chrono-panel__input--skill" name="attr_log-skill-title" type="number" value="0" placeholder="0" />
         </div>
       </fieldset>
     </div> <!-- Skill(LOG) -->
@@ -304,8 +298,8 @@
       </div>
       <fieldset class="repeating_vib-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_vib-skill-name" type="text" placeholder="VIB Skill"/>
-          <input class="chrono-panel__input--skill" name="attr_vib-skill-name" type="number" value="0" placeholder="0" />
+          <input class="chrono-panel__input--hide" name="attr_vib-skill-title" type="text" placeholder="VIB Skill"/>
+          <input class="chrono-panel__input--skill" name="attr_vib-skill-title" type="number" value="0" placeholder="0" />
         </div>
       </fieldset>
     </div> <!-- Skill(VIB) -->
@@ -342,17 +336,17 @@
 
     <div class="sheet-chrono-body">
       {{#stat_value}}
-        <div class="sheet-chrono-roll-row"><span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>
+        <div class="sheet-chrono-roll-row">
+          <span>+</span><span>{{stat_title}}</span><span>({{stat_value}})</span></div>
       {{/stat_value}}
       
       {{#skill_value}}
-        <div class="sheet-chrono-roll-row"><span>+</span><span>{{skill_title}}</span><span>({{skill_value}})</span></div>
+        <div class="sheet-chrono-roll-row"><span>+</span><span>{{skill_title}} Skill</span><span>({{skill_value}})</span></div>
       {{/skill_value}}
 
       {{#bonus_dice}}
         <div class="sheet-chrono-roll-row">
-          <span>+</span>
-          <span data-i18n="Bonus">Bonus</span>
+          <span>+</span><span data-i18n="Bonus">Bonus</span>
           <span>({{bonus_dice}}) </span>
         </div>
       {{/bonus_dice}}
