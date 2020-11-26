@@ -208,8 +208,9 @@
 }
 .charsheet .sheet-chrono-panel__header {
   padding: 0.5em;
-  background: #000;
-  color: #fff;
+  /*background: #000;*/
+  background: #d2da5c;
+  color: #000;
   font-family: "Catamaran", sans-serif;
   font-size: 1.25em;
   text-transform: uppercase;
@@ -238,7 +239,7 @@
   color: #f95867;
   border-color: #f95867;
 }
-.sheet-rolltemplate-chrono .sheet-empathy-theme h2 {
+.sheet-rolltemplate-chrono .sheet-presence-theme h2 {
   color: #8abcf9;
   border-color:#8abcf9;
 }
@@ -246,8 +247,8 @@
 .sheet-rolltemplate-chrono .sheet-desire-theme .sheet-chrono-buttons a {
   background-color: #f95867; /*red*/
 }
-.charsheet .sheet-empathy-bg,
-.sheet-rolltemplate-chrono .sheet-empathy-theme .sheet-chrono-buttons a  {
+.charsheet .sheet-presence-bg,
+.sheet-rolltemplate-chrono .sheet-presence-theme .sheet-chrono-buttons a  {
   background-color: #8abcf9; /*blue*/
 }
 .charsheet .sheet-mid-bg {
@@ -656,6 +657,6 @@ input[type="radio"]:checked ~ input[type="radio"] + span::before {
 }
 
 .sheet-chrono-panel-light-bg {
-  background: #999;
+  background: #c1c1c1;
   color: black;
 }
