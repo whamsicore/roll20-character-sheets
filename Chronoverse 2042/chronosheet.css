@@ -206,7 +206,8 @@
   font-size: 12pt;
   font-weight: bold;
 }
-.charsheet .sheet-chrono-panel__header {
+.charsheet .sheet-chrono-panel__header, 
+.charsheet .sheet-chrono-panel__header button {
   padding: 0.5em;
   /*background: #000;*/
   background: #d2da5c;
@@ -214,6 +215,7 @@
   font-family: "Catamaran", sans-serif;
   font-size: 1.25em;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 .charsheet .sheet-chrono-panel__row, 
 .charsheet .sheet-chrono-panel__row--textarea, 
@@ -276,11 +278,6 @@
   grid-template-columns: 4.5em 1fr;
   border-bottom: 1px solid #000;
 }
-/*.charsheet .sheet-chrono-panel__row--iconic {
-  padding: 0;
-  padding-left: 0.35em;
-  background: #ffd998;
-}*/
 .charsheet .sheet-chrono-panel__row--item {
   display: grid;
   grid-template-columns: 1fr 4em;
@@ -306,14 +303,24 @@
   padding: 0;
   align-self: stretch;
 }
-.charsheet .sheet-chrono-panel__label, .charsheet .sheet-chrono-panel__label--plus, .charsheet .sheet-chrono-panel__label--value, .charsheet .sheet-chrono-panel__label--select, .charsheet .sheet-chrono-panel__label--small, .charsheet .sheet-chrono-panel__label--button {
+.charsheet .sheet-chrono-panel__label, 
+.charsheet .sheet-chrono-panel__label--plus, 
+.charsheet .sheet-chrono-panel__label--value, 
+.charsheet .sheet-chrono-panel__label--select, 
+.charsheet .sheet-chrono-panel__label--small, 
+.charsheet .sheet-chrono-attr-row .sheet-chrono-panel__label--button {
   flex-shrink: 0;
   flex-grow: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12pt;
 }
-.charsheet .sheet-chrono-panel__label:before, .charsheet .sheet-chrono-panel__label--plus:before, .charsheet .sheet-chrono-panel__label--value:before, .charsheet .sheet-chrono-panel__label--select:before, .charsheet .sheet-chrono-panel__label--small:before, .charsheet .sheet-chrono-panel__label--button:before {
+.charsheet .sheet-chrono-panel__label:before, 
+.charsheet .sheet-chrono-panel__label--plus:before, 
+.charsheet .sheet-chrono-panel__label--value:before, 
+.charsheet .sheet-chrono-panel__label--select:before, 
+.charsheet .sheet-chrono-panel__label--small:before, 
+.charsheet .sheet-chrono-panel__label--button:before {
   display: none;
 }
 .charsheet .sheet-chrono-panel__label--button {

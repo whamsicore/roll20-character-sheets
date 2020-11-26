@@ -35,22 +35,6 @@
   </div>
 
   <div class="chrono-col1">
-    
-    <!-- Full Body -->
-    <!-- <div class="chrono-panel">
-      <div class="chrono-panel__header rand-bg-9 mid-bg dark-txt">
-        <span class="chrono-panel__left" xdata-i18n="Skills">Body</span>
-        <span class="chrono-panel__right" xdata-i18n="Bonus">Level</span>
-      </div>
-      <fieldset class="repeating_skill">
-        <div class="chrono-panel__row--item chrono-panel__row--skill rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_body_skill_name" type="text"/>
-          <input class="chrono-panel__input--skill" name="attr_body_skill_type" type="number" value="0"/>
-          <button type="action"
-        </div>
-      </fieldset>
-    </div> --> <!-- Body -->
-
     <!-- Skill(CTR) -->
     <div class="chrono-panel">
       <div class="chrono-panel__header rand-bg-9 desire-bg dark-txt">
@@ -77,16 +61,16 @@
         <span class="chrono-panel__left" xdata-i18n="Skills">Timing</span>
         <span class="chrono-panel__right" xdata-i18n="Bonus">LvL</span>
       </div>
-      <fieldset class="repeating_flow-skill">
+      <fieldset class="repeating_timing-skill">
         <div class="chrono-panel__row--skill rand-bg-3">
-          <input class="chrono-panel__input--hide" name="attr_flow-skill-title" type="text" placeholder="FLO Skill"/>
+          <input class="chrono-panel__input--hide" name="attr_timing-skill-title" type="text" placeholder="FLO Skill"/>
           <button 
             xclass="chrono-panel__label--button" 
             class="chrono-roll-button blank-roll-button" 
             type="roll" 
             value="&amp;{template:chrono} {{action_name=@{timing-skill-title}}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+?{Bonus Dice|0}+@{timing-skill-value}]]}} {{roll=[[[[@{control}+?{Bonus Dice|0}+@{timing-skill-value}]]d6&gt;6]]}} {{presence_push_button=[@{presence_push_button}](~@{character_id}|presence_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{control}}} {{stat_title=Control}} {{push_energy_cost=[[@{pain}+1]]}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}} !modattr --silent --charid @{character_id} --turnTracker|[[+1]]!!! {{skill_value=@{timing-skill-value}}} {{skill_title=@{timing-skill-title}}}">
           </button>
-          <input class="chrono-panel__input--skill" name="attr_flow-skill-value" type="number" value="0" placeholder="0" />
+          <input class="chrono-panel__input--skill" name="attr_timing-skill-value" type="number" value="0" placeholder="0" />
         </div>
       </fieldset>
     </div> <!-- Skill(FLO) -->
@@ -119,7 +103,14 @@
   <div class="chrono-col2">
     <div class="chrono-col21">
       <div class="chrono-panel--alternate">
-        <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Body</div>
+        <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">
+          <button 
+            class="chrono-panel__label--button" 
+            xdata-i18n="Control" 
+            type="roll" 
+            value="&amp;{template:chrono} {{action_name=Full Body}} {{character_name=@{character_name}}} {{total_dice=[[@{control}+@{timing}+?{Bonus Dice|0}]]}} {{roll=[[[[@{control}+@{timing}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=[[@{control}+@{timing}]]}} {{stat_title=Body}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Body
+          </button>
+        </div>
 
         <div class="chrono-panel__row chrono-attr-row rand-bg-6 desire-bg dark-txt">
           <button 
@@ -138,7 +129,7 @@
             type="roll" 
             value="&amp;{template:chrono} {{action_name=Timing}} {{character_name=@{character_name}}} {{total_dice=[[@{timing}+?{Bonus Dice|0}]]}} {{roll=[[[[@{timing}+?{Bonus Dice|0}]]d6&gt;6]]}} {{presence_push_button=[@{presence_push_button}](~@{character_id}|presence_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{timing}}} {{stat_title=timing}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Timing
           </button>
-          <input class="chrono-panel__input--small" name="attr_flow" type="number" value="0"/>
+          <input class="chrono-panel__input--small" name="attr_timing" type="number" value="0"/>
         </div> <!-- timing button -->
       </div> <!-- Body attributes -->
 
@@ -175,7 +166,14 @@
 
       <!-- Spirit attributes -->
       <div class="chrono-panel--full chrono-panel--alternate">
-        <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Spirit</div>
+        <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">
+          <button 
+            class="chrono-panel__label--button" 
+            xdata-i18n="Control" 
+            type="roll" 
+            value="&amp;{template:chrono} {{action_name=Full Spirit}} {{character_name=@{character_name}}} {{total_dice=[[@{desire}+@{presence}+?{Bonus Dice|0}]]}} {{roll=[[[[@{desire}+@{presence}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=[[@{desire}+@{presence}]]}} {{stat_title=Spirit}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Spirit
+          </button>
+        </div>
 
         <div class="chrono-panel__row chrono-attr-row rand-bg-6 desire-bg dark-txt">
           <button 
@@ -202,7 +200,14 @@
 
     <div class="chrono-col23">
       <div class="chrono-panel--alternate">
-        <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">Mind</div>
+        <div class="chrono-panel__header rand-bg-2" xdata-i18n="Attributes">
+          <button 
+            class="chrono-panel__label--button" 
+            xdata-i18n="Control" 
+            type="roll" 
+            value="&amp;{template:chrono} {{action_name=Full Mind}} {{character_name=@{character_name}}} {{total_dice=[[@{logic}+@{insight}+?{Bonus Dice|0}]]}} {{roll=[[[[@{logic}+@{insight}+?{Bonus Dice|0}]]d6&gt;6]]}} {{stat_value=[[@{logic}+@{insight}]]}} {{stat_title=Mind}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Mind
+          </button>
+        </div>
 
         <div class="chrono-panel__row chrono-attr-row rand-bg-6 desire-bg dark-txt">
           <button 
@@ -221,7 +226,7 @@
             type="roll" 
             value="&amp;{template:chrono} {{action_name=Insight}} {{character_name=@{character_name}}} {{total_dice=[[@{insight}+?{Bonus Dice|0}]]}} {{roll=[[[[@{insight}+?{Bonus Dice|0}]]d6&gt;6]]}} {{presence_push_button=[@{presence_push_button}](~@{character_id}|presence_push)}} {{push_energy_cost=[[@{pain}+1]]}} {{stat_value=@{insight}}} {{stat_title=insight}} {{bonus_dice=?{Bonus Dice|0}}} {{energy=@{energy}}} {{energyMax=@{energy|max}}}"> Insight
           </button>
-          <input class="chrono-panel__input--small" name="attr_presence" type="number" value="0"/>
+          <input class="chrono-panel__input--small" name="attr_insight" type="number" value="0"/>
         </div> <!-- Insight button -->
       </div> <!-- Mind Attributes -->
 
